@@ -1,19 +1,5 @@
-import clsx from "clsx";
 import { Analytics } from '@vercel/analytics/react';
-import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 import "../styles/globals.css";
-
-const mono = IBM_Plex_Mono({
-  weight: ["200", "300", "400", "500", "600", "700"],
-  variable: "--font-ibm-plex-mono",
-  subsets: ["latin"]
-});
-
-const sans = IBM_Plex_Sans({
-  weight: ["200", "300", "400", "500", "600", "700"],
-  variable: "--font-ibm-plex-sans",
-  subsets: ["latin"]
-});
 
 export const metadata = {
   title: "themeaningof8",
@@ -26,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={clsx(sans.variable, mono.variable, "scroll-smooth")}>
+    <html lang="en" className="scroll-smooth">
       <Analytics />
       <body className="overflow-y-scroll">
         <div className="mx-6 my-10">

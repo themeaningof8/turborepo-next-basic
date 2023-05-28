@@ -9,7 +9,7 @@ export const client = createClient({
   dataset,
   apiVersion, // https://www.sanity.io/docs/api-versioning
   useCdn: true, // if you're using ISR or only static generation at build time then you can set this to `false` to guarantee no stale content
-  studioUrl: '/studio', // Or: 'https://my-cool-project.sanity.studio'
+  studioUrl: 'https://admin.kazkiueda.com/', // Or: 'https://my-cool-project.sanity.studio'
   encodeSourceMap: true, // Optional. Default to: process.env.NEXT_PUBLIC_VERCEL_ENV === 'preview',
 })
 

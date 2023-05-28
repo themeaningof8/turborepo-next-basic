@@ -19,7 +19,7 @@ export default {
     },
     fontFamily: {
       sans: [
-        "var(--font-ibm-plex-sans), var(--font-ibm-plex-mono), system-ui",
+        `"system-ui", "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"`,
         {
           fontFeatureSettings: '"palt"',
         },
