@@ -11,10 +11,11 @@
         "!.next/cache/**"
       ]
     },
-    "lint": {},
     "dev": {
       "cache": false,
       "persistent": true
-    }
+    },
+    "lint": {},
+    "build-token": {}
   }
 }

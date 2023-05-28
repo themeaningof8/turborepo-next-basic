@@ -4,6 +4,7 @@
     "build": "turbo run build",
     "dev": "dotenv -- turbo dev",
     "lint": "turbo run lint",
+    "build-token": "turbo run token",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
