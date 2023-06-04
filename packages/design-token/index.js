@@ -4,12 +4,13 @@ const StyleDictionaryModule = require('style-dictionary')
 const { makeSdTailwindConfig } = require('sd-tailwindcss-transformer')
 
 function transformStringToUpperCase() {
-  const filePaths = glob.sync('./style-dictionary/tokens/*.js');
+  const filePaths = glob.sync('./tokens/*.js');
   filePaths.forEach(filePath => {
     const content = fs.readFileSync(filePath, 'utf8');
     const updatedContent = content.replace(/default/g, 'DEFAULT');
     fs.writeFileSync(filePath, updatedContent, 'utf8');
   });
+  console.log('transformStringToUpperCase done');
 }
 
 StyleDictionaryModule.registerTransform({
@@ -56,8 +57,8 @@ const types = ['boxShadow', 'colors', 'fontSize', 'fontWeight', 'spacing', 'bord
 types.map((type) => {
   let sdConfig = makeSdTailwindConfig({
     type,
-    source: ['./style-dictionary/tokens.json'],
-    buildPath: './style-dictionary/tokens/',
+    source: ['./tokens.json'],
+    buildPath: './tokens/',
     transforms: ['attribute/cti', 'name/cti/kebab', 'tailwind/fontSize', 'tailwind/boxShadow']
   })
   const StyleDictionary = StyleDictionaryModule.extend(sdConfig)

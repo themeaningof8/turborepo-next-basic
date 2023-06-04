@@ -1,13 +1,13 @@
-const Typography = require("@tailwindcss/typography");
-const borderRadius = require("./style-dictionary/tokens/borderRadius.tailwind")
-const borderWidth = require("./style-dictionary/tokens/borderWidth.tailwind")
-const boxShadow = require("./style-dictionary/tokens/boxShadow.tailwind")
-const colors = require("./style-dictionary/tokens/colors.tailwind")
-const fontSize = require('./style-dictionary/tokens/fontSize.tailwind')
-const fontWeight = require('./style-dictionary/tokens/fontWeight.tailwind')
-const lineHeight = require('./style-dictionary/tokens/lineHeight.tailwind')
-const opacity = require('./style-dictionary/tokens/opacity.tailwind')
-const spacing = require('./style-dictionary/tokens/spacing.tailwind')
+const typography = require("@tailwindcss/typography");
+const borderRadius = require('design-token/tokens/borderRadius.tailwind')
+const borderWidth = require('design-token/tokens/borderWidth.tailwind')
+const boxShadow = require('design-token/tokens/boxShadow.tailwind')
+const colors = require('design-token/tokens/colors.tailwind')
+const fontSize = require('design-token/tokens/fontSize.tailwind')
+const fontWeight = require('design-token/tokens/fontWeight.tailwind')
+const lineHeight = require('design-token/tokens/lineHeight.tailwind')
+const opacity = require('design-token/tokens/opacity.tailwind')
+const spacing = require('design-token/tokens/spacing.tailwind')
 
 module.exports = {
   content: ["./app/**/*.{ts,tsx}"],
@@ -31,5 +31,5 @@ module.exports = {
     },
     extend: {},
   },
-  plugins: [Typography],
+  plugins: [typography],
 } 
