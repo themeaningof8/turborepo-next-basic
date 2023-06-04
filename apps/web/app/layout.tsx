@@ -12,11 +12,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth prose text-xs shadow">
       <Analytics />
       <body className="overflow-y-scroll">
-        <div className="mx-6 my-10">
-          <div className="prose mx-auto">{children}</div>
+        <div className="mx-6 my-10 text-bold">
+          <div className="mx-auto">{children}</div>
         </div>
       </body>
     </html>
