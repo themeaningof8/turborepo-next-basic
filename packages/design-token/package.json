@@ -4,7 +4,7 @@
 	"main": "index.js",
 	"license": "MIT",
 	"scripts": {
-		"build": "node index.js"
+		"build": "node build.js"
 	},
 	"devDependencies": {
 		"eslint-config-custom": "workspace:*",

@@ -1,80 +1,31 @@
-const fs = require('fs');
-const glob = require('glob');
-const StyleDictionaryModule = require('style-dictionary')
-const { makeSdTailwindConfig } = require('sd-tailwindcss-transformer')
+const borderRadius = require('./tokens/borderRadius.tailwind')
+const borderWidth = require('./tokens/borderWidth.tailwind')
+const boxShadow = require('./tokens/boxShadow.tailwind')
+const colors = require('./tokens/colors.tailwind')
+const fontSize = require('./tokens/fontSize.tailwind')
+const fontWeight = require('./tokens/fontWeight.tailwind')
+const lineHeight = require('./tokens/lineHeight.tailwind')
+const opacity = require('./tokens/opacity.tailwind')
+const spacing = require('./tokens/spacing.tailwind')
 
-function transformStringToUpperCase() {
-  const filePaths = glob.sync('./tokens/*.js');
-  filePaths.forEach(filePath => {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const updatedContent = content.replace(/default/g, 'DEFAULT');
-    fs.writeFileSync(filePath, updatedContent, 'utf8');
-  });
-  console.log('transformStringToUpperCase done');
-}
-
-function transformUnderscoreToFloating() {
-  const filePaths = glob.sync('./tokens/*.js');
-  filePaths.forEach(filePath => {
-    const regex = /(\d)_(?=\d)/g;
-    const content = fs.readFileSync(filePath, 'utf8');
-    const updatedContent = content.replace(regex, "$1.");
-    fs.writeFileSync(filePath, updatedContent, 'utf8');
-  });
-  console.log('transformUnderscoreToFloating done');
-}
-
-StyleDictionaryModule.registerTransform({
-  type: 'value',
-  transitive: true,
-  name: 'tailwind/boxShadow',
-  matcher: function (token) {
-    return token.attributes.category === 'boxShadow'
+module.exports = {
+  theme: {
+    borderRadius,
+    borderWidth,
+    boxShadow,
+    colors,
+    fontSize,
+    fontWeight,
+    lineHeight,
+    opacity,
+    spacing,
+    fontFamily: {
+      sans: [
+        `"system-ui", "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"`,
+        {
+          fontFeatureSettings: '"palt"',
+        },
+      ],
+    },
   },
-  transformer: function (args) {
-    function formatBoxShadowProperty(value) {
-      const { x, y, blur, spread, color, type } = value
-      if (value === 'none') return value
-      if (type === 'innerShadow') return `inset ${[x, y, blur, spread].map(formatValue).join(" ")} ${color}`
-      return `${[x, y, blur, spread].map(formatValue).join(" ")} ${color}`
-    }
-    const formatValue = (val) => {
-      if (val === "0") return val
-      return val + "px";
-    }
-    if (Array.isArray(args.value)) {
-      return args.value.map((value) => {
-        return formatBoxShadowProperty(value)
-      }).join(", ")
-    }
-    return formatBoxShadowProperty(args.value)
-  }
-})
-
-StyleDictionaryModule.registerTransform({
-  type: 'value',
-  transitive: true,
-  name: 'tailwind/fontSize',
-  matcher: function (token) {
-    return token.attributes.category === 'fontSize'
-  },
-  transformer: function (token) {
-    return Object.values(token.value)
-  }
-})
-
-const types = ['boxShadow', 'colors', 'fontSize', 'fontWeight', 'spacing', 'borderWidth', 'borderRadius', 'lineHeight', 'opacity', 'letterSpacing']
-
-types.map((type) => {
-  let sdConfig = makeSdTailwindConfig({
-    type,
-    source: ['./tokens.json'],
-    buildPath: './tokens/',
-    transforms: ['attribute/cti', 'name/cti/kebab', 'tailwind/fontSize', 'tailwind/boxShadow']
-  })
-  const StyleDictionary = StyleDictionaryModule.extend(sdConfig)
-  StyleDictionary.buildAllPlatforms()
-})
-
-transformStringToUpperCase()
-transformUnderscoreToFloating()
+} 
