@@ -13,6 +13,17 @@ function transformStringToUpperCase() {
   console.log('transformStringToUpperCase done');
 }
 
+function transformUnderscoreToFloating() {
+  const filePaths = glob.sync('./tokens/*.js');
+  filePaths.forEach(filePath => {
+    const regex = /(\d)_(?=\d)/g;
+    const content = fs.readFileSync(filePath, 'utf8');
+    const updatedContent = content.replace(regex, "$1.");
+    fs.writeFileSync(filePath, updatedContent, 'utf8');
+  });
+  console.log('transformUnderscoreToFloating done');
+}
+
 StyleDictionaryModule.registerTransform({
   type: 'value',
   transitive: true,
@@ -66,3 +77,4 @@ types.map((type) => {
 })
 
 transformStringToUpperCase()
+transformUnderscoreToFloating()

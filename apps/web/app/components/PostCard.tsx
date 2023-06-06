@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 
 export default function PostCard(props: any) {
