@@ -8,7 +8,7 @@
     "lint": "eslint \"**/*.ts*\"",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "chromatic --project-token=project-token"
+    "chromatic": "chromatic"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.0.18",
@@ -25,7 +25,7 @@
     "eslint-config-custom": "workspace:*",
     "eslint-plugin-storybook": "^0.6.12",
     "prop-types": "^15.8.1",
-    "react": "^17.0.2",
+    "react": "^18.0.2",
     "react-dom": "^18.2.0",
     "storybook": "^7.0.18",
     "tsconfig": "workspace:*",
