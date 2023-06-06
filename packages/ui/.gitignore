@@ -34,4 +34,6 @@ yarn-error.log*
 .vercel
 
 # storybook
+build-storybook.log
 /storybook-static
+
