@@ -9,13 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@themeaningof8/ui": "workspace:*",
     "@vercel/analytics": "^1.0.0",
     "next": "latest",
     "next-sanity": "^4.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-syntax-highlighter": "^15.5.0",
-    "ui": "workspace:*"
+    "react-syntax-highlighter": "^15.5.0"
   },
   "devDependencies": {
     "@portabletext/react": "^3.0.0",
@@ -27,10 +27,11 @@
     "autoprefixer": "^10.4.14",
     "clsx": "^1.2.1",
     "cssnano": "^6.0.0",
-    "eslint-config-next": "latest",
-    "eslint-config-custom": "workspace:*",
     "design-token": "workspace:*",
+    "eslint-config-custom": "workspace:*",
+    "eslint-config-next": "latest",
     "postcss": "^8.4.23",
+    "postcss-import": "^15.1.0",
     "tailwindcss": "^3.3.1",
     "tsconfig": "workspace:*",
     "typescript": "^4.5.3"

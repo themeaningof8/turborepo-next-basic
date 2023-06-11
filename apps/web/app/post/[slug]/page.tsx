@@ -1,7 +1,6 @@
+import blockContents from '@components/blockContents'
+import { getPostBySlug } from '@lib/client'
 import { PortableText } from '@portabletext/react'
-
-import { getPostBySlug } from '../../../client'
-import blockContents from '../../components/blockContents'
 
 export default async function PostSlug({
   params,

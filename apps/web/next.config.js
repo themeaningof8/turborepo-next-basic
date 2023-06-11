@@ -4,7 +4,7 @@ module.exports = {
   experimental: {
     appDir: true,
   },
-  swcMinify: true,
   reactStrictMode: true,
-  transpilePackages: ['ui'],
+  swcMinify: true,
+  transpilePackages: ['@themeaningof8/ui'],
 }

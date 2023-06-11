@@ -5,11 +5,12 @@
     "dev": "dotenv -- turbo dev",
     "lint": "turbo run lint",
     "build:token": "turbo run build:token",
+    "storybook": "turbo run storybook",
     "format": "prettier --write \"**/*.{js,ts,tsx,md}\""
   },
   "devDependencies": {
     "dotenv-cli": "latest",
-    "eslint": "^8.42.0",
+    "eslint": "^8.43.0",
     "eslint-config-custom": "workspace:*",
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.3.0",

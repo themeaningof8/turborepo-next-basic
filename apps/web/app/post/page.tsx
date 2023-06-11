@@ -1,9 +1,16 @@
 'use client'
 
+import { getPosts } from '@lib/client'
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@themeaningof8/ui'
+import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-
-import { getPosts } from '../../client'
-import PostCard from '../components/PostCard'
 
 export default async function Post() {
   const pathname = usePathname()
@@ -11,11 +18,28 @@ export default async function Post() {
   return (
     <article>
       <h2>{pathname}</h2>
-      <section className="space-y-8">
-        {posts.map((post) => {
-          return <PostCard key={post._id} {...post} />
-        })}
-      </section>
+      <Table>
+        <TableHeader>
+          <TableRow>
+            <TableHead>Title</TableHead>
+            <TableHead>CreatedAt</TableHead>
+            <TableHead>Slug</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {posts.map((post) => {
+            return (
+              <TableRow key={post._id}>
+                <TableCell className="font-medium">
+                  <Link href={`/post/${post.slug.current}`}>{post.title}</Link>
+                </TableCell>
+                <TableCell>{post._createdAt}</TableCell>
+                <TableCell>{post.slug.current}</TableCell>
+              </TableRow>
+            )
+          })}
+        </TableBody>
+      </Table>
     </article>
   )
 }

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Button } from './Button';
+import { Button } from './Button'
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta: Meta<typeof Button> = {
@@ -27,12 +27,12 @@ const meta: Meta<typeof Button> = {
         type: 'select',
       },
       description: 'ボタンの見た目を制御します。',
-    }
+    },
   },
   component: Button,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
   tags: ['autodocs'],
-  title: 'themeaningof8/Button'
+  title: 'themeaningof8/Button',
 }
 
 export default meta

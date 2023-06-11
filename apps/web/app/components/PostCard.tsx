@@ -10,7 +10,7 @@ export default function PostCard(props: any) {
       href={`/post/${slug.current}`}
     >
       <h3>{title}</h3>
-      <span className="text-secondary text-sm font-normal">{_createdAt}</span>
+      <span className="text-primary text-sm font-normal">{_createdAt}</span>
     </Link>
   )
 }

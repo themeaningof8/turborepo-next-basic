@@ -14,6 +14,18 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@styles/*": [
+        "./app/styles/*",
+      ],
+      "@components/*": [
+        "./app/components/*",
+      ],
+      "@lib/*": [
+        "./app/lib/*",
+      ],
+    }
   }
 }

@@ -63,6 +63,7 @@ const types = [
   'colors',
   'fontSize',
   'fontWeight',
+  'sizing',
   'spacing',
   'borderWidth',
   'borderRadius',
