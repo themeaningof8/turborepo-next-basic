@@ -9,6 +9,16 @@
       "outputs": [
         ".next/**",
         "!.next/cache/**"
+      ],
+      "env": [
+        "NEXT_PUBLIC_SANITY_STUDIO_TITLE",
+        "NEXT_PUBLIC_SANITY_STUDIO_DATASET",
+        "NEXT_PUBLIC_SANITY_STUDIO_PROJECT_ID",
+        "SANITY_STUDIO_TITLE",
+        "SANITY_STUDIO_DATASET",
+        "SANITY_STUDIO_PROJECT_ID",
+        "SANITY_STUDIO_PAGE_SPEED_INSIGHTS_API_KEY",
+        "CHROMATIC_PROJECT_TOKEN"
       ]
     },
     "dev": {

@@ -6,5 +6,5 @@ module.exports = {
   },
   swcMinify: true,
   reactStrictMode: true,
-  transpilePackages: ["ui"],
-};
+  transpilePackages: ['ui'],
+}

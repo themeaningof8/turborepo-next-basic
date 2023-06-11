@@ -1,0 +1,8 @@
+.vscode-test/
+.next/
+out/
+dist/
+build/
+storybook-static/
+test-fixtures/
+node_modules/

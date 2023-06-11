@@ -1,4 +1,4 @@
-import { Button } from "ui";
+import { Button } from 'ui'
 
 export default function RootPage() {
   return (
@@ -6,5 +6,5 @@ export default function RootPage() {
       <h1>Web</h1>
       <Button />
     </div>
-  );
+  )
 }

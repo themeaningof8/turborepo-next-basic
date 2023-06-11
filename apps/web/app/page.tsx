@@ -1,5 +1,5 @@
-import RootPage from './root';
+import RootPage from './root'
 
 export default async function Web() {
-  return <RootPage />;
+  return <RootPage />
 }

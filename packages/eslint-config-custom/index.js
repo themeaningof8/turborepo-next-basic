@@ -1,11 +1,18 @@
 module.exports = {
-  extends: ["next", "turbo", "prettier"],
+  extends: [
+    'next',
+    'turbo',
+    'plugin:perfectionist/recommended-alphabetical',
+    'prettier',
+  ],
+  plugins: ['perfectionist'],
   rules: {
-    "@next/next/no-html-link-for-pages": "off",
+    '@next/next/no-html-link-for-pages': 'off',
+    'react/no-unescaped-entities': 'off',
   },
   parserOptions: {
     babelOptions: {
-      presets: [require.resolve("next/babel")],
+      presets: [require.resolve('next/babel')],
     },
   },
-};
+}

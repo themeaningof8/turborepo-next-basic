@@ -27,6 +27,7 @@
     "autoprefixer": "^10.4.14",
     "clsx": "^1.2.1",
     "cssnano": "^6.0.0",
+    "eslint-config-next": "latest",
     "eslint-config-custom": "workspace:*",
     "design-token": "workspace:*",
     "postcss": "^8.4.23",

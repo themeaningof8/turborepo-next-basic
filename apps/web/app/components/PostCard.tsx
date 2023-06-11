@@ -3,14 +3,14 @@
 import Link from 'next/link'
 
 export default function PostCard(props: any) {
-  const { title, slug, _createdAt } = props
+  const { _createdAt, slug, title } = props
   return (
     <Link
+      className="block cursor-pointer no-underline"
       href={`/post/${slug.current}`}
-      className='block cursor-pointer no-underline'
     >
       <h3>{title}</h3>
-      <span className='text-sm text-secondary font-normal'>{_createdAt}</span>
+      <span className="text-secondary text-sm font-normal">{_createdAt}</span>
     </Link>
   )
 }

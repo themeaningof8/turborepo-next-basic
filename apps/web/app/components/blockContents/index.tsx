@@ -1,9 +1,9 @@
-import Code from "./Code";
+import Code from './Code'
 
 const blockContents = {
   types: {
-    code: ({ value }) => <Code {...value} />
-  }
+    code: ({ value }) => <Code {...value} />,
+  },
 }
 
 export default blockContents

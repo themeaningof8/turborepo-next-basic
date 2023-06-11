@@ -14,11 +14,6 @@ module.exports = {
     borderWidth,
     boxShadow,
     colors,
-    fontSize,
-    fontWeight,
-    lineHeight,
-    opacity,
-    spacing,
     fontFamily: {
       sans: [
         `"system-ui", "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"`,
@@ -27,5 +22,10 @@ module.exports = {
         },
       ],
     },
+    fontSize,
+    fontWeight,
+    lineHeight,
+    opacity,
+    spacing,
   },
-} 
+}
