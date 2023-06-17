@@ -4,7 +4,7 @@ export {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from './components/Accordion'
+} from '@components/Accordion'
 export { Button, buttonVariants } from './components/Button'
 export {
   Table,
@@ -15,5 +15,5 @@ export {
   TableHead,
   TableHeader,
   TableRow,
-} from './components/Table'
-export { cn } from './lib/utils'
+} from '@components/Table'
+export { cn } from '@lib/utils'

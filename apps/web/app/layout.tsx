@@ -1,4 +1,4 @@
-import '@styles/index.css'
+import '@styles/globals.css'
 import { Analytics } from '@vercel/analytics/react'
 
 export const metadata = {
@@ -14,9 +14,9 @@ export default function RootLayout({
   return (
     <html className="scroll-smooth" lang="en">
       <Analytics />
-      <body className="overflow-y-scroll">
+      <body className="bg-background text-foreground dark:bg-background-dark dark:text-foreground-dark overflow-y-scroll">
         <div className="mx-6 my-10">
-          <div className="prose mx-auto">{children}</div>
+          <div className="prose dark:prose-invert mx-auto">{children}</div>
         </div>
       </body>
     </html>

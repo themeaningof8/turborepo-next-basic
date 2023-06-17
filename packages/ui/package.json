@@ -12,7 +12,7 @@
       "import": "./dist/index.mjs",
       "types": "./dist/index.d.ts"
     },
-    "./tailwind.config.js": "./tailwind.config.js"
+    "./tailwind-config": "./tailwind.config.js"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -34,6 +34,7 @@
     "@storybook/react": "^7.0.20",
     "@storybook/react-vite": "^7.0.20",
     "@storybook/testing-library": "0.0.14-next.2",
+    "@themeaningof8/design-token": "workspace:*",
     "@themeaningof8/eslint-config-custom": "workspace:*",
     "@themeaningof8/tsconfig": "workspace:*",
     "@types/react": "^17.0.60",
@@ -41,7 +42,6 @@
     "@typescript-eslint/eslint-plugin": "^5.50.0",
     "autoprefixer": "^10.4.14",
     "chromatic": "^6.18.2",
-    "design-token": "workspace:*",
     "eslint": "^8.42.0",
     "eslint-plugin-storybook": "^0.6.12",
     "postcss": "^8.4.24",

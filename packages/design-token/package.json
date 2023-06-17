@@ -1,5 +1,5 @@
 {
-	"name": "design-token",
+	"name": "@themeaningof8/design-token",
 	"version": "0.0.0",
 	"main": "index.js",
 	"license": "MIT",

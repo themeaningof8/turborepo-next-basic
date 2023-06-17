@@ -20,6 +20,7 @@
   "devDependencies": {
     "@portabletext/react": "^3.0.0",
     "@tailwindcss/typography": "^0.5.9",
+    "@themeaningof8/design-token": "workspace:*",
     "@themeaningof8/eslint-config-custom": "workspace:*",
     "@themeaningof8/tsconfig": "workspace:*",
     "@types/node": "^17.0.12",
@@ -29,7 +30,6 @@
     "autoprefixer": "^10.4.14",
     "clsx": "^1.2.1",
     "cssnano": "^6.0.0",
-    "design-token": "workspace:*",
     "eslint-config-next": "latest",
     "postcss": "^8.4.23",
     "postcss-import": "^15.1.0",
