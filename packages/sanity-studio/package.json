@@ -1,5 +1,5 @@
 {
-  "name": "sanity-studio",
+  "name": "@themeaningof8/sanity-studio",
   "private": true,
   "version": "1.0.0",
   "main": "package.json",
