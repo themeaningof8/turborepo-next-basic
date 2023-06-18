@@ -3,6 +3,6 @@ import { defineConfig } from "tsup";
 export default defineConfig({
   clean: true,
   dts: true,
-  format: ["cjs", "esm"],
-  target: "es6",
+  format: ["esm"],
+  target: "es2020",
 });
