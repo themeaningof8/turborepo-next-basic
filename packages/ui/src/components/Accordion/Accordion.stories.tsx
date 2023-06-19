@@ -1,5 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
+import { expect } from '@storybook/jest'
+import { userEvent, waitFor, within } from '@storybook/testing-library';
+
 import {
   Accordion,
   AccordionContent,
@@ -35,6 +38,7 @@ const data = [
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 export const Default: Story = {
+  play: async ({ container }) => { },
   // More on args: https://storybook.js.org/docs/react/writing-stories/args
   render: () => (
     <Accordion className="w-full" type="multiple">
@@ -45,5 +49,5 @@ export const Default: Story = {
         </AccordionItem>
       ))}
     </Accordion>
-  ),
+  )
 }
