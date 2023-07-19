@@ -37,7 +37,6 @@
     "@storybook/react": "^7.0.20",
     "@storybook/react-vite": "^7.0.20",
     "@storybook/testing-library": "0.0.14-next.2",
-    "@themeaningof8/design-token": "workspace:*",
     "@themeaningof8/eslint-config-custom": "workspace:*",
     "@themeaningof8/tsconfig": "workspace:*",
     "@types/react": "^17.0.60",
@@ -61,6 +60,7 @@
   "dependencies": {
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-slot": "^1.0.2",
+    "@themeaningof8/design-token": "workspace:*",
     "class-variance-authority": "^0.6.0",
     "clsx": "^1.2.1",
     "lucide-react": "^0.241.0",
