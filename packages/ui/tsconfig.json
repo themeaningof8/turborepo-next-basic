@@ -10,6 +10,10 @@
   ],
   "compilerOptions": {
     "baseUrl": ".",
+    "lib": [
+      "dom",
+      "esnext"
+    ],
     "paths": {
       "@components/*": [
         "./src/components/*"
