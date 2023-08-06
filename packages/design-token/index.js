@@ -1,8 +1,8 @@
-const borderRadius = require('./dist/js/borderRadius.tokens')
-const borderWidth = require('./dist/js/borderWidth.tokens')
-const fontSize = require('./dist/js/fontSize.tokens')
-const opacity = require('./dist/js/opacity.tokens')
-const spacing = require('./dist/js/spacing.tokens')
+const borderRadius = require('./tokens/js/borderRadius.tokens')
+const borderWidth = require('./tokens/js/borderWidth.tokens')
+const fontSize = require('./tokens/js/fontSize.tokens')
+const opacity = require('./tokens/js/opacity.tokens')
+const spacing = require('./tokens/js/spacing.tokens')
 
 module.exports = {
   theme: {

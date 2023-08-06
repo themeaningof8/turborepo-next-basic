@@ -84,7 +84,7 @@ const getSdJsConfig = (category: TokenCategoryType) => {
     source: ['tokens.json'],
     platforms: {
       js: {
-        buildPath: 'dist/js/',
+        buildPath: 'tokens/js/',
         transformGroup: 'js',
         files: [
           {
@@ -105,7 +105,7 @@ const getSdCssConfig = () => {
     source: ['tokens.json'],
     platforms: {
       css: {
-        buildPath: 'dist/css/',
+        buildPath: 'tokens/css/',
         transformGroup: 'css',
         files: [
           {

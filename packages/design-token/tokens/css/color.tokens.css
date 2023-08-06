@@ -1,0 +1,26 @@
+/**
+ * Do not edit directly
+ * Generated on Wed, 19 Jul 2023 12:36:42 GMT
+ */
+
+:root {
+  --ring: hsl(215, 20%, 65%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 100%, 50%);
+  --accent-foreground: hsl(222, 46%, 11%);
+  --accent: hsl(210, 40%, 96%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(210, 40%, 96%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --primary: hsl(222, 46%, 11%);
+  --card-foreground: hsl(222, 46%, 11%);
+  --card: hsl(0, 0%, 0%);
+  --input: hsl(214, 30%, 91%);
+  --border: hsl(214, 30%, 91%);
+  --popover-foreground: hsl(222, 46%, 11%);
+  --popover: hsl(0, 0%, 100%);
+  --muted-foreground: hsl(215, 16%, 47%);
+  --muted: hsl(210, 40%, 96%);
+  --foreground: hsl(222, 46%, 11%);
+  --background: hsl(0, 0%, 100%);
+}
