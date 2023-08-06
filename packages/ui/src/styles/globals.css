@@ -1,4 +1,4 @@
-@import '@themeaningof8/design-token/dist/css/color.tokens.css';
+@import '@themeaningof8/design-token/tokens/css/color.tokens.css';
 
 @tailwind base;
 @tailwind components;

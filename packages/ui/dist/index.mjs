@@ -1268,7 +1268,7 @@ var require_react_development = __commonJS({
           }
           return lazyType;
         }
-        function forwardRef4(render) {
+        function forwardRef5(render) {
           {
             if (render != null && render.$$typeof === REACT_MEMO_TYPE) {
               error("forwardRef requires a render function but received a `memo` component. Instead of forwardRef(memo(...)), use memo(forwardRef(...)).");
@@ -2165,7 +2165,7 @@ var require_react_development = __commonJS({
         exports.createElement = createElement$1;
         exports.createFactory = createFactory;
         exports.createRef = createRef;
-        exports.forwardRef = forwardRef4;
+        exports.forwardRef = forwardRef5;
         exports.isValidElement = isValidElement;
         exports.lazy = lazy;
         exports.memo = memo;
@@ -2242,7 +2242,7 @@ var require_react_jsx_runtime_development = __commonJS({
     if (process.env.NODE_ENV !== "production") {
       (function() {
         "use strict";
-        var React4 = require_react();
+        var React5 = require_react();
         var REACT_ELEMENT_TYPE = Symbol.for("react.element");
         var REACT_PORTAL_TYPE = Symbol.for("react.portal");
         var REACT_FRAGMENT_TYPE = Symbol.for("react.fragment");
@@ -2268,7 +2268,7 @@ var require_react_jsx_runtime_development = __commonJS({
           }
           return null;
         }
-        var ReactSharedInternals = React4.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+        var ReactSharedInternals = React5.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
         function error(format) {
           {
             {
@@ -3103,10 +3103,10 @@ var require_react_jsx_runtime_development = __commonJS({
             return jsxWithValidation(type, props, key, false);
           }
         }
-        var jsx4 = jsxWithValidationDynamic;
+        var jsx5 = jsxWithValidationDynamic;
         var jsxs2 = jsxWithValidationStatic;
         exports.Fragment = REACT_FRAGMENT_TYPE;
-        exports.jsx = jsx4;
+        exports.jsx = jsx5;
         exports.jsxs = jsxs2;
       })();
     }
@@ -3296,12 +3296,36 @@ var TableCaption = React3.forwardRef(({ className, ...props }, ref) => /* @__PUR
   }
 ));
 TableCaption.displayName = "TableCaption";
+
+// src/components/Popover/Popover.tsx
+var React4 = __toESM(require_react());
+var import_jsx_runtime4 = __toESM(require_jsx_runtime());
+import * as PopoverPrimitive from "@radix-ui/react-popover";
+var Popover = PopoverPrimitive.Root;
+var PopoverTrigger = PopoverPrimitive.Trigger;
+var PopoverContent = React4.forwardRef(({ align = "center", className, sideOffset = 4, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(PopoverPrimitive.Portal, { children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
+  PopoverPrimitive.Content,
+  {
+    className: cn(
+      "bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 w-72 rounded-md border p-4 shadow-md outline-none",
+      className
+    ),
+    align,
+    ref,
+    sideOffset,
+    ...props
+  }
+) }));
+PopoverContent.displayName = PopoverPrimitive.Content.displayName;
 export {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
   Button,
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
   Table,
   TableBody,
   TableCaption,
