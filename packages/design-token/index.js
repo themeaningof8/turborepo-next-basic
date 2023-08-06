@@ -6,20 +6,13 @@ const spacing = require('./dist/js/spacing.tokens')
 
 module.exports = {
   theme: {
-    borderRadius,
-    borderWidth,
-    fontFamily: {
-      sans: [
-        `"system-ui", "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"`,
-        {
-          fontFeatureSettings: '"palt"',
-        },
-      ],
-    },
-    fontSize,
-    opacity,
-    spacing,
     extend: {
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      borderRadius,
+      borderWidth,
       colors: {
         border: "var(--border)",
         input: "var(--input)",
@@ -55,6 +48,15 @@ module.exports = {
           foreground: "var(--card-foreground)",
         },
       },
+      fontFamily: {
+        sans: [
+          `"system-ui", "-apple-system", "BlinkMacSystemFont", "Hiragino Kaku Gothic ProN", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"`,
+          {
+            fontFeatureSettings: '"palt"',
+          },
+        ],
+      },
+      fontSize,
       keyframes: {
         "accordion-down": {
           from: { height: 0 },
@@ -65,10 +67,8 @@ module.exports = {
           to: { height: 0 },
         },
       },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-      },
+      opacity,
+      spacing,
     }
   },
 }
