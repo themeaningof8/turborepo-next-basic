@@ -59,7 +59,7 @@ StyleDictionary.registerFormat({
         result[property.name] = property.value;
       }
     })
-    return 'module.exports = ' + JSON.stringify(result, null, 2) + ';\n';
+    return 'export default ' + JSON.stringify(result, null, 2) + ` satisfies Record<string, string | Record<string, string>>` + ';\n';
   }
 })
 
@@ -75,7 +75,7 @@ StyleDictionary.registerParser({
   },
 })
 
-const getDestination = ({ name, extension }: { name: string, extension: 'json' | 'js' | 'css' }) => {
+const getDestination = ({ name, extension }: { name: string, extension: 'json' | 'ts' | 'css' }) => {
   return [name, 'tokens', extension].join('.');
 }
 
@@ -88,7 +88,7 @@ const getSdJsConfig = (category: TokenCategoryType) => {
         transformGroup: 'js',
         files: [
           {
-            destination: getDestination({ name: category, extension: 'js' }),
+            destination: getDestination({ name: category, extension: 'ts' }),
             format: 'myCustomFormat',
             filter: (token: DesignToken) => {
               return token.attributes?.category === category

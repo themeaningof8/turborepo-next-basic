@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   "0": "0",
   "xs": "20rem",
   "sm": "24rem",
@@ -11,4 +11,4 @@ module.exports = {
   "5xl": "64rem",
   "6xl": "72rem",
   "7xl": "80rem"
-};
+} satisfies Record<string, string | Record<string, string>>;

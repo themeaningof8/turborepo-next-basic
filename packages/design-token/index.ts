@@ -1,10 +1,12 @@
-const borderRadius = require('./tokens/js/borderRadius.tokens')
-const borderWidth = require('./tokens/js/borderWidth.tokens')
-const fontSize = require('./tokens/js/fontSize.tokens')
-const opacity = require('./tokens/js/opacity.tokens')
-const spacing = require('./tokens/js/spacing.tokens')
+import type { Config } from "tailwindcss"
+import borderRadius from './tokens/js/borderRadius.tokens'
+import borderWidth from './tokens/js/borderWidth.tokens'
+import fontSize from './tokens/js/fontSize.tokens'
+import opacity from './tokens/js/opacity.tokens'
+import spacing from './tokens/js/spacing.tokens'
 
-module.exports = {
+export default {
+  content: [],
   theme: {
     extend: {
       animation: {
@@ -59,16 +61,16 @@ module.exports = {
       fontSize,
       keyframes: {
         "accordion-down": {
-          from: { height: 0 },
+          from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: 0 },
+          to: { height: "0" },
         },
       },
       opacity,
       spacing,
     }
   },
-}
+} satisfies Config

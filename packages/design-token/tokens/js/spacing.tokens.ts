@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   "0": "0",
   "1": "0.25rem",
   "2": "0.125rem",
@@ -34,4 +34,4 @@ module.exports = {
   "1.5": "0.375rem",
   "2.5": "0.625rem",
   "3.5": "0.875rem"
-};
+} satisfies Record<string, string | Record<string, string>>;

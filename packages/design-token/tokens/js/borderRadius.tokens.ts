@@ -1,5 +1,5 @@
-module.exports = {
-  "none": 0,
+export default {
+  "none": "0",
   "sm": "2px",
   "DEFAULT": "4px",
   "md": "6px",
@@ -8,4 +8,4 @@ module.exports = {
   "2xl": "16px",
   "3xl": "24px",
   "full": "9999px"
-};
+} satisfies Record<string, string | Record<string, string>>;

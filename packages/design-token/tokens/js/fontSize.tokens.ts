@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   "xs": "12px",
   "sm": "14px",
   "base": "16px",
@@ -12,4 +12,4 @@ module.exports = {
   "7xl": "72px",
   "8xl": "96px",
   "9xl": "144px"
-};
+} satisfies Record<string, string | Record<string, string>>;
