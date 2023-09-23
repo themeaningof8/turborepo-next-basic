@@ -1,12 +1,12 @@
-import StyleDictionary from 'style-dictionary'
 import type { DesignToken, Options } from 'style-dictionary'
 
+import StyleDictionary from 'style-dictionary'
+
 StyleDictionary.registerTransform({
-  name: 'size/pxToRem',
-  type: 'value',
   matcher: (token: DesignToken) => {
     return token.type === 'dimension'
   },
+  name: 'size/pxToRem',
   transformer: (token: DesignToken, options: Options) => {
     function getBasePxFontSize(options: Options): number {
       return (options && options.basePxFontSize) || 16;
@@ -17,7 +17,8 @@ StyleDictionary.registerTransform({
       return '0';
     }
     return `${floatVal / baseFont}rem`;
-  }
+  },
+  type: 'value'
 })
 
 StyleDictionary.registerTransformGroup({
@@ -45,7 +46,6 @@ type TokenCategoryType = typeof categories[number]
 type TokenType = Record<TokenCategoryType, Record<string, string>>
 
 StyleDictionary.registerFormat({
-  name: 'myCustomFormat',
   formatter: ({ dictionary }) => {
     const result = {} as TokenType;
     dictionary.allProperties.map((property) => {
@@ -59,12 +59,12 @@ StyleDictionary.registerFormat({
         result[property.name] = property.value;
       }
     })
-    return 'export default ' + JSON.stringify(result, null, 2) + ` satisfies Record<string, string | Record<string, string>>` + ';\n';
-  }
+    return 'export default ' + JSON.stringify(result, null, 2) + ` satisfies Record<string, Record<string, string> | string>` + ';\n';
+  },
+  name: 'myCustomFormat'
 })
 
 StyleDictionary.registerParser({
-  pattern: /\.json$|\.tokens\.json$|\.tokens$/,
   parse: ({ contents }) => {
     const output = contents
       .replace(/["|']?\$value["|']?:/g, '"value":')
@@ -73,54 +73,55 @@ StyleDictionary.registerParser({
       .replace(/(\d)-(?=\d)/g, '$1.')
     return JSON.parse(output);
   },
+  pattern: /\.json$|\.tokens\.json$|\.tokens$/,
 })
 
-const getDestination = ({ name, extension }: { name: string, extension: 'json' | 'ts' | 'css' }) => {
+const getDestination = ({ extension, name }: { extension: 'css' | 'json' | 'ts', name: string }) => {
   return [name, 'tokens', extension].join('.');
 }
 
 const getSdJsConfig = (category: TokenCategoryType) => {
   return {
-    source: ['tokens.json'],
     platforms: {
       js: {
         buildPath: 'tokens/js/',
-        transformGroup: 'js',
         files: [
           {
-            destination: getDestination({ name: category, extension: 'ts' }),
-            format: 'myCustomFormat',
+            destination: getDestination({ extension: 'ts', name: category }),
             filter: (token: DesignToken) => {
               return token.attributes?.category === category
-            }
+            },
+            format: 'myCustomFormat'
           }
-        ]
+        ],
+        transformGroup: 'js'
       }
-    }
+    },
+    source: ['tokens.json']
   }
 }
 
 const getSdCssConfig = () => {
   return {
-    source: ['tokens.json'],
     platforms: {
       css: {
         buildPath: 'tokens/css/',
-        transformGroup: 'css',
         files: [
           {
-            destination: getDestination({ name: 'color', extension: 'css' }),
-            format: 'css/variables',
+            destination: getDestination({ extension: 'css', name: 'color' }),
             filter: (token: DesignToken) => {
               return token.category === 'color'
             },
+            format: 'css/variables',
             options: {
               outputReferences: true,
             }
           }
-        ]
+        ],
+        transformGroup: 'css'
       }
-    }
+    },
+    source: ['tokens.json']
   }
 }
 

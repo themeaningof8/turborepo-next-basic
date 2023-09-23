@@ -8,4 +8,4 @@ export default {
   "2xl": "16px",
   "3xl": "24px",
   "full": "9999px"
-} satisfies Record<string, string | Record<string, string>>;
+} satisfies Record<string, Record<string, string> | string>;

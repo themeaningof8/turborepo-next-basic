@@ -4,4 +4,4 @@ export default {
   "4": "4px",
   "8": "8px",
   "DEFAULT": "1px"
-} satisfies Record<string, string | Record<string, string>>;
+} satisfies Record<string, Record<string, string> | string>;

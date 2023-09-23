@@ -12,4 +12,4 @@ export default {
   "7xl": "72px",
   "8xl": "96px",
   "9xl": "144px"
-} satisfies Record<string, string | Record<string, string>>;
+} satisfies Record<string, Record<string, string> | string>;

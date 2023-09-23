@@ -14,4 +14,4 @@ export default {
   "90": "0.9",
   "95": "0.95",
   "100": "1"
-} satisfies Record<string, string | Record<string, string>>;
+} satisfies Record<string, Record<string, string> | string>;

@@ -11,4 +11,4 @@ export default {
   "5xl": "64rem",
   "6xl": "72rem",
   "7xl": "80rem"
-} satisfies Record<string, string | Record<string, string>>;
+} satisfies Record<string, Record<string, string> | string>;
