@@ -8,7 +8,7 @@ export default async function Post({ params }) {
   const post = await reader.collections.posts.read(params.slug)
   return (
     <>
-      <h1>{await post.title}</h1>
+      {/* <h1>post.title</h1> */}
       <DocumentRenderer document={await post.content()} />
     </>
   )
