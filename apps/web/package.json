@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@keystatic/core": "^0.1.6",
+    "@keystatic/next": "^1.0.1",
     "@themeaningof8/ui": "workspace:*",
     "@vercel/analytics": "^1.0.2",
     "lucide-react": "^0.241.0",
@@ -17,8 +19,6 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@keystatic/core": "^0.1.6",
-    "@keystatic/next": "^1.0.1",
     "@tailwindcss/typography": "^0.5.10",
     "@themeaningof8/design-token": "workspace:*",
     "@themeaningof8/eslint-config-custom": "workspace:*",
