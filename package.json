@@ -11,7 +11,7 @@
   "devDependencies": {
     "@themeaningof8/eslint-config-custom": "workspace:*",
     "dotenv-cli": "latest",
-    "eslint": "^8.51.0",
+    "eslint": "^8.56.0",
     "prettier": "^2.8.8",
     "turbo": "latest"
   },

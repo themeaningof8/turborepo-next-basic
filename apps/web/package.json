@@ -9,10 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@keystatic/core": "^0.1.6",
-    "@keystatic/next": "^1.0.1",
+    "@keystatic/core": "^0.1.9",
+    "@keystatic/next": "^1.0.2",
     "@themeaningof8/ui": "workspace:*",
-    "@vercel/analytics": "^1.0.2",
+    "@vercel/analytics": "^1.1.1",
     "lucide-react": "^0.241.0",
     "next": "latest",
     "react": "^18.2.0",
@@ -24,15 +24,15 @@
     "@themeaningof8/eslint-config-custom": "workspace:*",
     "@themeaningof8/tsconfig": "workspace:*",
     "@types/node": "^17.0.45",
-    "@types/react": "^18.2.22",
-    "@types/react-dom": "^18.2.7",
+    "@types/react": "^18.2.46",
+    "@types/react-dom": "^18.2.18",
     "autoprefixer": "^10.4.16",
     "clsx": "^1.2.1",
-    "cssnano": "^6.0.1",
+    "cssnano": "^6.0.2",
     "eslint-config-next": "latest",
-    "postcss": "^8.4.31",
+    "postcss": "^8.4.32",
     "postcss-import": "^15.1.0",
-    "tailwindcss": "^3.3.3",
+    "tailwindcss": "^3.4.0",
     "typescript": "^4.9.5"
   }
 }
