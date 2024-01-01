@@ -4,10 +4,13 @@
 	"main": "index.ts",
 	"license": "MIT",
 	"scripts": {
-		"build": "ts-node sd.config.ts"
+		"build": "ts-node sd.config.ts",
+		"lint": "biome lint . --apply",
+    "format": "biome format . --write",
+    "check": "biome format ."
 	},
 	"devDependencies": {
-		"@themeaningof8/eslint-config-custom": "workspace:*",
+		"@biomejs/biome": "^1.4.1",
 		"@themeaningof8/tsconfig": "workspace:*",
 		"@types/node": "^17.0.12",
 		"style-dictionary": "^3.8.0",

@@ -2,14 +2,11 @@
   "$schema": "https://biomejs.dev/schemas/1.4.1/schema.json",
   "files": {
     "ignore": [
-      "dist",
-      ".next",
+      ".github",
       ".turbo",
       ".vercel",
-      "build",
+      ".vscode",
       "node_modules",
-      "storybook-static",
-      "tokens",
       "*.d.ts"
     ]
   },

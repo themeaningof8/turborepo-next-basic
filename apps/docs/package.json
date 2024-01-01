@@ -6,7 +6,9 @@
     "dev": "next dev --port 3001",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "biome lint . --apply",
+    "format": "biome format . --write",
+    "check": "biome format ."
   },
   "dependencies": {
     "@themeaningof8/ui": "workspace:*",
@@ -15,7 +17,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@themeaningof8/eslint-config-custom": "workspace:*",
+    "@biomejs/biome": "^1.4.1",
     "@themeaningof8/tsconfig": "workspace:*",
     "@types/node": "^17.0.45",
     "@types/react": "^18.2.22",

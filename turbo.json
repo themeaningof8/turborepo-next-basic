@@ -12,6 +12,8 @@
       "persistent": true
     },
     "lint": {},
+    "format": {},
+    "check": {},
     "build:token": {},
     "storybook": {}
   }
