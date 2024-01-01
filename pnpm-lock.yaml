@@ -109,6 +109,9 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.18
         version: 18.2.18
+      '@vercel/speed-insights':
+        specifier: ^1.0.2
+        version: 1.0.2
       autoprefixer:
         specifier: ^10.4.16
         version: 10.4.16(postcss@8.4.32)
@@ -6479,6 +6482,11 @@ packages:
     dependencies:
       server-only: 0.0.1
     dev: false
+
+  /@vercel/speed-insights@1.0.2:
+    resolution: {integrity: sha512-y5HWeB6RmlyVYxJAMrjiDEz8qAIy2cit0fhBq+MD78WaUwQvuBnQlX4+5MuwVTWi46bV3klaRMq83u9zUy1KOg==}
+    requiresBuild: true
+    dev: true
 
   /@vitejs/plugin-react@3.1.0(vite@4.5.1):
     resolution: {integrity: sha512-AfgcRL8ZBhAlc3BFdigClmTUMISmmzHn7sB2h9U1odvc5U/MjWXsAaz18b/WoppUTDBzxOJwo2VdClfUcItu9g==}

@@ -1,4 +1,5 @@
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import './globals.css'
 
@@ -15,6 +16,7 @@ export default function RootLayout({
   return (
     <html className="scroll-smooth" lang="en">
       <Analytics />
+      <SpeedInsights/>
       <body className="bg-background text-foreground dark:bg-background-dark dark:text-foreground-dark overflow-y-scroll">
         <div className="mx-6 my-10">
           <div className="prose dark:prose-invert mx-auto">{children}</div>
