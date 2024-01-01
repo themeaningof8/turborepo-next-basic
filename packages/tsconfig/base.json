@@ -16,10 +16,6 @@
     "skipLibCheck": true,
     "strict": true
   },
-  "exclude": [
-    "node_modules"
-  ],
-  "include": [
-    "../../env.d.ts"
-  ]
+  "exclude": ["node_modules"],
+  "include": ["../../env.d.ts"]
 }

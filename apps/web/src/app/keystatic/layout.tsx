@@ -1,8 +1,8 @@
-import KeystaticApp from "./keystatic";
+import KeystaticApp from './keystatic'
 
 export default function Layout() {
   return (
-    <html>
+    <html lang="ja">
       <head />
       <body>
         <KeystaticApp />

@@ -1,23 +1,11 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": [
-    "**/.env",
-    "**/.env.*local"
-  ],
-  "globalPassThroughEnv": [
-    "NODE_ENV",
-    "NEXT_PUBLIC_VERCEL_**"
-  ],
+  "globalDependencies": ["**/.env", "**/.env.*local"],
+  "globalPassThroughEnv": ["NODE_ENV", "NEXT_PUBLIC_VERCEL_**"],
   "pipeline": {
     "build": {
-      "outputs": [
-        ".next/**",
-        "!.next/cache/**"
-      ],
-      "env": [
-        "NODE_ENV",
-        "CHROMATIC_PROJECT_TOKEN"
-      ]
+      "outputs": [".next/**", "!.next/cache/**"],
+      "env": ["NODE_ENV", "CHROMATIC_PROJECT_TOKEN"]
     },
     "dev": {
       "cache": false,

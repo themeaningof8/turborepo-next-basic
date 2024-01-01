@@ -8,27 +8,27 @@ StyleDictionary.registerTransform({
   },
   name: 'size/pxToRem',
   transformer: (token: DesignToken, options: Options) => {
-    function getBasePxFontSize(options: Options): number {
-      return (options && options.basePxFontSize) || 16;
+    function getBasePxFontSize(options?: Options): number {
+      return options?.basePxFontSize || 16
     }
-    const baseFont: number = getBasePxFontSize(options);
-    const floatVal: number = parseFloat(token.value);
+    const baseFont: number = getBasePxFontSize(options)
+    const floatVal: number = parseFloat(token.value)
     if (floatVal === 0) {
-      return '0';
+      return '0'
     }
-    return `${floatVal / baseFont}rem`;
+    return `${floatVal / baseFont}rem`
   },
   type: 'value'
 })
 
 StyleDictionary.registerTransformGroup({
   name: 'css',
-  transforms: ['attribute/cti', 'color/hsl'],
+  transforms: ['attribute/cti', 'color/hsl']
 })
 
 StyleDictionary.registerTransformGroup({
   name: 'js',
-  transforms: ['attribute/cti', 'size/pxToRem'],
+  transforms: ['attribute/cti', 'size/pxToRem']
 })
 
 const categories = [
@@ -38,28 +38,33 @@ const categories = [
   'maxWidth',
   'opacity',
   'screens',
-  'spacing',
+  'spacing'
 ]
 
-type TokenCategoryType = typeof categories[number]
+type TokenCategoryType = (typeof categories)[number]
 
 type TokenType = Record<TokenCategoryType, Record<string, string>>
 
 StyleDictionary.registerFormat({
   formatter: ({ dictionary }) => {
-    const result = {} as TokenType;
+    const result = {} as TokenType
     dictionary.allProperties.map((property) => {
       if (typeof property.attributes?.item === 'string') {
-        const type = property.attributes.type;
+        const type = property.attributes.type
         if (type) {
-          result[type] = result[type] || {} as Record<TokenCategoryType, string>;
-          result[type][property.attributes.item] = property.value;
+          result[type] =
+            result[type] || ({} as Record<TokenCategoryType, string>)
+          result[type][property.attributes.item] = property.value
         }
       } else {
-        result[property.name] = property.value;
+        result[property.name] = property.value
       }
     })
-    return 'export default ' + JSON.stringify(result, null, 2) + ` satisfies Record<string, Record<string, string> | string>` + ';\n';
+    return `export default ${JSON.stringify(
+      result,
+      null,
+      2
+    )} satisfies Record<string, Record<string, string> | string>;\n`
   },
   name: 'myCustomFormat'
 })
@@ -71,13 +76,16 @@ StyleDictionary.registerParser({
       .replace(/["|']?\$?type["|']?:/g, '"type":')
       .replace(/["|']?\$?description["|']?:/g, '"comment":')
       .replace(/(\d)-(?=\d)/g, '$1.')
-    return JSON.parse(output);
+    return JSON.parse(output)
   },
-  pattern: /\.json$|\.tokens\.json$|\.tokens$/,
+  pattern: /\.json$|\.tokens\.json$|\.tokens$/
 })
 
-const getDestination = ({ extension, name }: { extension: 'css' | 'json' | 'ts', name: string }) => {
-  return [name, 'tokens', extension].join('.');
+const getDestination = ({
+  extension,
+  name
+}: { extension: 'css' | 'json' | 'ts'; name: string }) => {
+  return [name, 'tokens', extension].join('.')
 }
 
 const getSdJsConfig = (category: TokenCategoryType) => {
@@ -114,7 +122,7 @@ const getSdCssConfig = () => {
             },
             format: 'css/variables',
             options: {
-              outputReferences: true,
+              outputReferences: true
             }
           }
         ],
@@ -126,10 +134,10 @@ const getSdCssConfig = () => {
 }
 
 // Build default tokens from config
-console.log('👷 Building default tokens');
+console.log('👷 Building default tokens')
 
 categories.map((category) => {
-  StyleDictionary.extend(getSdJsConfig(category)).buildAllPlatforms();
+  StyleDictionary.extend(getSdJsConfig(category)).buildAllPlatforms()
 })
 
-StyleDictionary.extend(getSdCssConfig()).buildAllPlatforms();
+StyleDictionary.extend(getSdCssConfig()).buildAllPlatforms()

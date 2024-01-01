@@ -6,5 +6,5 @@ export {
   TableFooter,
   TableHead,
   TableHeader,
-  TableRow,
+  TableRow
 } from './Table'

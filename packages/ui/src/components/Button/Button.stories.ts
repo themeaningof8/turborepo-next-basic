@@ -8,31 +8,31 @@ const meta: Meta<typeof Button> = {
   argTypes: {
     asChild: {
       control: {
-        type: 'boolean',
-      },
+        type: 'boolean'
+      }
     },
     children: {
-      description: 'ボタン内の文字列を制御します。',
+      description: 'ボタン内の文字列を制御します。'
     },
     size: {
       control: {
         options: ['sm', 'md', 'lg'],
-        type: 'select',
+        type: 'select'
       },
-      description: 'ボタンのサイズを制御します。',
+      description: 'ボタンのサイズを制御します。'
     },
     variant: {
       control: {
         options: ['default', 'destructive', 'ghost', 'link', 'secondary'],
-        type: 'select',
+        type: 'select'
       },
-      description: 'ボタンの見た目を制御します。',
-    },
+      description: 'ボタンの見た目を制御します。'
+    }
   },
   component: Button,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
   tags: ['autodocs'],
-  title: 'themeaningof8/Button',
+  title: 'themeaningof8/Button'
 }
 
 export default meta
@@ -43,6 +43,6 @@ export const Default: Story = {
   // More on args: https://storybook.js.org/docs/react/writing-stories/args
   args: {
     children: 'Button',
-    variant: 'default',
-  },
+    variant: 'default'
+  }
 }

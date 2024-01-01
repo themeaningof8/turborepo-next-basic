@@ -18,7 +18,7 @@ export const Header = ({
   onCreateAccount,
   onLogin,
   onLogout,
-  user,
+  user
 }: HeaderProps) => (
   <header>
     <div className="storybook-header">
@@ -30,6 +30,7 @@ export const Header = ({
           xmlns="http://www.w3.org/2000/svg"
         >
           <g fill="none" fillRule="evenodd">
+            <title>ACME</title>
             <path
               d="M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z"
               fill="#FFF"

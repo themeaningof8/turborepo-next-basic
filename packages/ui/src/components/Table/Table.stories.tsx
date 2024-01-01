@@ -7,14 +7,14 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,
+  TableRow
 } from './Table'
 
 const meta: Meta<typeof Table> = {
   argTypes: {},
   component: Table,
   tags: ['autodocs'],
-  title: 'themeaningof8/Table',
+  title: 'themeaningof8/Table'
 }
 
 export default meta
@@ -25,44 +25,44 @@ const invoices = [
     invoice: 'INV001',
     paymentMethod: 'Credit Card',
     paymentStatus: 'Paid',
-    totalAmount: '$250.00',
+    totalAmount: '$250.00'
   },
   {
     invoice: 'INV002',
     paymentMethod: 'PayPal',
     paymentStatus: 'Pending',
-    totalAmount: '$150.00',
+    totalAmount: '$150.00'
   },
   {
     invoice: 'INV003',
     paymentMethod: 'Bank Transfer',
     paymentStatus: 'Unpaid',
-    totalAmount: '$350.00',
+    totalAmount: '$350.00'
   },
   {
     invoice: 'INV004',
     paymentMethod: 'Credit Card',
     paymentStatus: 'Paid',
-    totalAmount: '$450.00',
+    totalAmount: '$450.00'
   },
   {
     invoice: 'INV005',
     paymentMethod: 'PayPal',
     paymentStatus: 'Paid',
-    totalAmount: '$550.00',
+    totalAmount: '$550.00'
   },
   {
     invoice: 'INV006',
     paymentMethod: 'Bank Transfer',
     paymentStatus: 'Pending',
-    totalAmount: '$200.00',
+    totalAmount: '$200.00'
   },
   {
     invoice: 'INV007',
     paymentMethod: 'Credit Card',
     paymentStatus: 'Unpaid',
-    totalAmount: '$300.00',
-  },
+    totalAmount: '$300.00'
+  }
 ]
 
 export const Default: Story = {
@@ -88,5 +88,5 @@ export const Default: Story = {
         ))}
       </TableBody>
     </Table>
-  ),
+  )
 }

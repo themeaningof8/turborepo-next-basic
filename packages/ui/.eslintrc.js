@@ -1,11 +1,11 @@
 module.exports = {
   env: {
-    es2020: true,
+    es2020: true
   },
   extends: ['@themeaningof8/eslint-config-custom'],
   ignorePatterns: ['node_modules', 'dist'],
   parserOptions: {
-    sourceType: 'module',
+    sourceType: 'module'
   },
-  root: true,
+  root: true
 }

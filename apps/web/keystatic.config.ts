@@ -1,4 +1,4 @@
-import { collection, config, fields } from '@keystatic/core';
+import { collection, config, fields } from '@keystatic/core'
 
 export default config({
   collections: {
@@ -13,15 +13,15 @@ export default config({
           formatting: true,
           images: true,
           label: 'Content',
-          links: true,
+          links: true
         }),
-        title: fields.slug({ name: { label: 'Title' } }),
+        title: fields.slug({ name: { label: 'Title' } })
       },
-      slugField: 'title',
-    }),
+      slugField: 'title'
+    })
   },
   singletons: {},
   storage: {
-    kind: 'local',
-  },
-});
+    kind: 'local'
+  }
+})

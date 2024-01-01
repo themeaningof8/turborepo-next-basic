@@ -5,10 +5,10 @@ import { Header } from '../Header'
 const meta: Meta<typeof Header> = {
   component: Header,
   parameters: {
-    layout: 'fullscreen',
+    layout: 'fullscreen'
   },
   tags: ['autodocs'],
-  title: 'Example/Header',
+  title: 'Example/Header'
 }
 
 export default meta
@@ -17,9 +17,9 @@ type Story = StoryObj<typeof Header>
 export const LoggedIn: Story = {
   args: {
     user: {
-      name: 'Jane Doe',
-    },
-  },
+      name: 'Jane Doe'
+    }
+  }
 }
 
 export const LoggedOut: Story = {}

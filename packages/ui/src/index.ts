@@ -1,9 +1,9 @@
-"use client";
+'use client'
 export {
   Accordion,
   AccordionContent,
   AccordionItem,
-  AccordionTrigger,
+  AccordionTrigger
 } from '@components/Accordion'
 export { Button, buttonVariants } from '@components/Button'
 export {
@@ -14,11 +14,11 @@ export {
   TableFooter,
   TableHead,
   TableHeader,
-  TableRow,
+  TableRow
 } from '@components/Table'
 export {
   Popover,
   PopoverContent,
-  PopoverTrigger,
-} from "@components/Popover"
+  PopoverTrigger
+} from '@components/Popover'
 export { cn } from '@lib/utils'

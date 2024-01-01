@@ -3,12 +3,13 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "dotenv -- turbo dev",
-    "lint": "turbo run lint",
+    "lint": "biome lint . --apply",
+    "format": "biome format . --write",
     "build:token": "turbo run build:token",
-    "storybook": "turbo run storybook",
-    "format": "prettier --write \"**/*.{js,ts,tsx,md}\""
+    "storybook": "turbo run storybook"
   },
   "devDependencies": {
+    "@biomejs/biome": "^1.4.1",
     "@themeaningof8/eslint-config-custom": "workspace:*",
     "dotenv-cli": "latest",
     "eslint": "^8.56.0",
