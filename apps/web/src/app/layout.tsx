@@ -15,12 +15,12 @@ export default function RootLayout({
 }) {
   return (
     <html className="scroll-smooth" lang="en">
-      <Analytics />
-      <SpeedInsights />
       <body className="bg-background text-foreground dark:bg-background-dark dark:text-foreground-dark overflow-y-scroll">
         <div className="mx-6 my-10">
           <div className="prose dark:prose-invert mx-auto">{children}</div>
         </div>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
