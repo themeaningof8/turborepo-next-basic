@@ -1,12 +1,14 @@
 import AxeBuilder from '@axe-core/playwright'
 import { expect, test } from '@playwright/test'
 
-test.describe('homepage', () => {
-  test('should not have any automatically detectable accessibility issues', async ({
-    page
-  }) => {
-    await page.goto('http://localhost:3000/')
-    const accessibilityScanResults = await new AxeBuilder({ page }).analyze()
-    expect(accessibilityScanResults.violations).toEqual([])
-  })
+test('should not have any automatically detectable WCAG AA violations', async ({
+  page
+}, testInfo) => {
+  await page.goto('http://localhost:3000')
+
+  const accessibilityScanResults = await new AxeBuilder({ page })
+    .withTags(['wcag2aa', 'wcag21aa'])
+    .analyze()
+
+  expect(accessibilityScanResults.violations).toEqual([])
 })

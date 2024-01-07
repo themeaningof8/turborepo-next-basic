@@ -15,6 +15,7 @@
     "format": {},
     "check": {},
     "build:token": {},
-    "storybook": {}
+    "storybook": {},
+    "test:e2e": {}
   }
 }

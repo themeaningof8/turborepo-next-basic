@@ -7,11 +7,13 @@
     "format": "turbo run format",
     "check": "turbo run format",
     "build:token": "turbo run build:token",
-    "storybook": "turbo run storybook"
+    "storybook": "turbo run storybook",
+    "test:e2e": "turbo run test:e2e"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.4.1",
     "dotenv-cli": "latest",
+    "lefthook": "^1.5.5",
     "turbo": "latest"
   },
   "packageManager": "pnpm@7.15.0",
