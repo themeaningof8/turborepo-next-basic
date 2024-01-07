@@ -1,0 +1,17 @@
+pre-push:
+  commands:
+    packages-audit:
+      tags: frontend security
+      run: pnpm audit
+
+pre-commit:
+  parallel: true
+  commands:
+    build-token:
+      glob: "packages/design-token/*"
+      run: bunx run build:token {staged_files}
+    check:
+      glob: "*.{js,ts,jsx,tsx,json}"
+      run: bunx run check {staged_files}
+    test/e2e:
+      run: turbo run test:e2e

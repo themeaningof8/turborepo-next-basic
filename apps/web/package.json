@@ -9,7 +9,7 @@
     "lint": "biome lint . --apply",
     "format": "biome format . --write",
     "check": "biome format .",
-    "test:a11y": "playwright test src/app/e2e/a11y.ts"
+    "test:e2e": "playwright test e2e"
   },
   "dependencies": {
     "@keystatic/core": "^0.1.9",
