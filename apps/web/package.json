@@ -9,7 +9,8 @@
     "lint": "biome lint . --apply",
     "format": "biome format . --write",
     "check": "biome format .",
-    "test:e2e": "playwright test e2e"
+    "test:e2e": "playwright test e2e",
+    "analyze-bundle": "ANALYZE=true next build"
   },
   "dependencies": {
     "@keystatic/core": "^0.1.9",
@@ -29,6 +30,7 @@
   "devDependencies": {
     "@axe-core/playwright": "^4.8.2",
     "@biomejs/biome": "^1.4.1",
+    "@next/bundle-analyzer": "^14.0.4",
     "@playwright/test": "^1.40.1",
     "@tailwindcss/typography": "^0.5.10",
     "@themeaningof8/design-token": "workspace:*",
