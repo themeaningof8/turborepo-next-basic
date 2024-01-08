@@ -17,11 +17,8 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@components/*": [
-        "src/app/components/*",
-      ],
-      "@api/*": [
-        "src/app/api/*",
+      "@/app/*": [
+        "./src/app/*",
       ],
       "@/*": [
         "./*",

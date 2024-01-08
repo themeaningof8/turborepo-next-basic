@@ -14,13 +14,17 @@
   "dependencies": {
     "@keystatic/core": "^0.1.9",
     "@keystatic/next": "^1.0.2",
+    "@radix-ui/react-slot": "^1.0.2",
     "@themeaningof8/ui": "workspace:*",
     "@vercel/analytics": "^1.1.1",
     "@vercel/speed-insights": "^1.0.2",
+    "class-variance-authority": "^0.6.1",
     "lucide-react": "^0.241.0",
     "next": "latest",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.8.2",
