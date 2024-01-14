@@ -1,4 +1,4 @@
-import { siteConfig } from '@/app/config/site'
+import { siteConfig } from '@/src/config/site'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Metadata, Viewport } from 'next'
@@ -59,13 +59,9 @@ export default function RootLayout({
   return (
     <html className="scroll-smooth" lang="ja">
       <body className="bg-background text-foreground dark:bg-background-dark dark:text-foreground-dark overflow-y-scroll">
-        <header>{siteConfig.name}</header>
-        <main className="mx-6 my-10">
-          <div className="prose dark:prose-invert mx-auto">{children}</div>
-        </main>
+        {children}
         <Analytics />
         <SpeedInsights />
-        <footer>あああ</footer>
       </body>
     </html>
   )

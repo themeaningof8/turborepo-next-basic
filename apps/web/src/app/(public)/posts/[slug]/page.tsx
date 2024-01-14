@@ -1,5 +1,8 @@
-import { reader } from '@/src/app/reader'
+import { createReader } from '@keystatic/core/reader'
 import { DocumentRenderer } from '@keystatic/core/renderer'
+import keystaticConfig from '@/keystatic.config'
+
+const reader = createReader(process.cwd(), keystaticConfig)
 
 export default async function Post({ params }: { params: { slug: string } }) {
   const { slug } = params
