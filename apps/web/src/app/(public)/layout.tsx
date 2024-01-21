@@ -1,4 +1,4 @@
-import Header from '@/src/components/header'
+import Header from '@components/header'
 
 import '@app/global.css'
 
@@ -10,7 +10,7 @@ export default function Layout({
   return (
     <>
       <Header />
-      <main className="mx-6 my-10">
+      <main className="mx-6 my-10 min-h-dvh">
         <div className="prose dark:prose-invert mx-auto">{children}</div>
       </main>
       <footer>あああ</footer>

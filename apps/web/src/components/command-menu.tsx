@@ -39,14 +39,14 @@ export function CommandMenu({ ...props }: DialogProps) {
 
     document.addEventListener('keydown', down)
     return () => document.removeEventListener('keydown', down)
-  }, [setOpen])
+  }, [])
 
   const runCommand = React.useCallback(
     (command: () => unknown) => {
       setOpen(false)
       command()
     },
-    [setOpen]
+    []
   )
 
   return (
