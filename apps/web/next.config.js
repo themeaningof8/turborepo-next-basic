@@ -7,7 +7,10 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  transpilePackages: ['@themeaningof8/ui']
+  transpilePackages: ['@themeaningof8/ui'],
+  experimental: {
+    optimizePackageImports: ["@keystatic/core", "@keystatic/next", "@keystatic/ui"],
+  }
 }
 
 module.exports = withBundleAnalyzer(nextConfig)
