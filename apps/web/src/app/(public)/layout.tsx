@@ -1,13 +1,15 @@
-import { siteConfig } from '@/src/config/site'
+import Header from '@/src/components/header'
 
-export default function RootLayout({
+import '@app/global.css'
+
+export default function Layout({
   children
 }: {
   children: React.ReactNode
 }) {
   return (
     <>
-      <header>{siteConfig.name}</header>
+      <Header />
       <main className="mx-6 my-10">
         <div className="prose dark:prose-invert mx-auto">{children}</div>
       </main>
