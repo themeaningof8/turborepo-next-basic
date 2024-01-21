@@ -20,6 +20,12 @@
       "@app/*": [
         "./src/app/*",
       ],
+      "@components/*": [
+        "./src/components/*",
+      ],
+      "@lib/*": [
+        "./src/lib/*",
+      ],
       "@/*": [
         "./*",
       ],
