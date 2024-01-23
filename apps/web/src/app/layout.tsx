@@ -1,6 +1,7 @@
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Metadata, Viewport } from 'next'
+import { ThemeProvider } from '@components/theme-provider'
 import { siteConfig } from '@/src/config/site'
 
 import '@app/global.css'
@@ -57,9 +58,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html className="scroll-smooth" lang="ja">
+    <html className="scroll-smooth" lang="ja" suppressHydrationWarning>
       <body className="bg-background text-foreground overflow-y-scroll dark:bg-background-dark dark:text-foreground-dark">
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
         <Analytics />
         <SpeedInsights />
       </body>

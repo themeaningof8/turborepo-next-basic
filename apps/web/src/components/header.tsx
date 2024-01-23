@@ -2,11 +2,12 @@ import Link from 'next/link'
 
 import { Button } from '@components/ui/button'
 import { CommandMenu } from '@components/command-menu'
+import { ModeToggle } from '@components/mode-toggle'
 import { siteConfig } from '@/src/config/site'
 
 export default function Header() {
   return (
-    <header className="flex items-center gap-12 px-5 h-16 border border-slate-100">
+    <header className="flex items-center gap-12 px-5 h-12 border-b border-border">
       <Button size="sm" variant="ghost" asChild>
         <Link href="/">{siteConfig.name}</Link>
       </Button>
@@ -16,6 +17,7 @@ export default function Header() {
         </Button>
       </nav>
       <CommandMenu />
+      <ModeToggle />
     </header>
   )
 }
