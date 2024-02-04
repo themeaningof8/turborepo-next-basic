@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: 'Kazki Ueda',
+  name: 'themeaningof8',
   url: 'https://www.kazkiueda.com',
   ogImage: 'https://www.kazkiueda.com/og.jpg',
   description:

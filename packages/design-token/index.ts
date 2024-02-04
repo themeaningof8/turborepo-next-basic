@@ -5,7 +5,7 @@ import fontSize from './tokens/js/fontSize.tokens'
 import opacity from './tokens/js/opacity.tokens'
 import spacing from './tokens/js/spacing.tokens'
 
-export default ({
+export default {
   content: [],
   theme: {
     extend: {
@@ -73,4 +73,4 @@ export default ({
       spacing
     }
   }
-} satisfies Config)
+} satisfies Config

@@ -2,10 +2,7 @@
   "name": "@themeaningof8/ui",
   "version": "0.0.0",
   "license": "MIT",
-  "files": [
-    "dist",
-    "package.json"
-  ],
+  "files": ["dist", "package.json"],
   "exports": {
     ".": {
       "require": "./dist/index.js",

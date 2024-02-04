@@ -1,26 +1,24 @@
 {
-	"name": "@themeaningof8/design-token",
-	"version": "0.0.0",
-	"main": "index.ts",
-	"license": "MIT",
-	"scripts": {
-		"build": "ts-node sd.config.ts",
-		"lint": "biome lint . --apply",
-		"format": "biome format . --write",
-		"check": "biome format ."
-	},
-	"devDependencies": {
-		"@biomejs/biome": "1.5.3-nightly.6cbf1c7",
-		"@themeaningof8/tsconfig": "workspace:*",
-		"@types/node": "^17.0.45",
-		"style-dictionary": "^3.9.1",
-		"ts-node": "^10.9.2",
-		"typescript": "^5.3.3"
-	},
-	"dependencies": {
-		"tailwindcss": "^3.4.0"
-	},
-	"ignorePatterns": [
-		"tokens/**/*.js"
-	]
+  "name": "@themeaningof8/design-token",
+  "version": "0.0.0",
+  "main": "index.ts",
+  "license": "MIT",
+  "scripts": {
+    "build": "ts-node sd.config.ts",
+    "lint": "biome lint . --apply",
+    "format": "biome format . --write",
+    "check": "biome format ."
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.5.3-nightly.6cbf1c7",
+    "@themeaningof8/tsconfig": "workspace:*",
+    "@types/node": "^17.0.45",
+    "style-dictionary": "^3.9.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.4.0"
+  },
+  "ignorePatterns": ["tokens/**/*.js"]
 }
