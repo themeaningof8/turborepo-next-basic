@@ -10,7 +10,7 @@
     "check": "biome format ."
   },
   "devDependencies": {
-    "@biomejs/biome": "1.5.3-nightly.6cbf1c7",
+    "@biomejs/biome": "^1.4.1",
     "@themeaningof8/tsconfig": "workspace:*",
     "@types/node": "^17.0.45",
     "style-dictionary": "^3.9.1",
