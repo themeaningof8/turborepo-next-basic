@@ -18,7 +18,18 @@
     "rules": {
       "recommended": true,
       "nursery": {
-        "useSortedClasses": "error"
+        "useSortedClasses": {
+          "options": {
+            "attributes": [
+              "className"
+            ],
+            "functions": [
+              "clsx",
+              "cva",
+              "cn"
+            ]
+          }
+        }
       }
     }
   },

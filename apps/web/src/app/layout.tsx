@@ -59,7 +59,7 @@ export default function RootLayout({
 }) {
   return (
     <html className="scroll-smooth" lang="ja" suppressHydrationWarning>
-      <body className="bg-background text-foreground overflow-y-scroll dark:bg-background-dark dark:text-foreground-dark">
+      <body className="overflow-y-scroll bg-background text-foreground dark:bg-background-dark dark:text-foreground-dark">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

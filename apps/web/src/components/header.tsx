@@ -7,11 +7,11 @@ import { siteConfig } from '@/src/config/site'
 
 export default function Header() {
   return (
-    <header className="flex items-center gap-12 px-5 h-12 border-b border-border">
+    <header className="flex h-12 items-center gap-12 border-border border-b px-5">
       <Button size="sm" variant="ghost" asChild>
         <Link href="/">{siteConfig.name}</Link>
       </Button>
-      <nav className="flex flex-1 items-center">
+      <nav className="flex-1 flex items-center">
         <Button size="sm" variant="ghost" asChild>
           <Link href="/posts">Posts</Link>
         </Button>
