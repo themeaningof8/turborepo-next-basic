@@ -11,9 +11,9 @@
     "test:e2e": "turbo run test:e2e"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.5.2",
+    "@biomejs/biome": "1.5.3-nightly.6cbf1c7",
     "dotenv-cli": "latest",
-    "lefthook": "^1.5.7",
+    "lefthook": "^1.6.1",
     "turbo": "latest"
   },
   "packageManager": "pnpm@7.15.0",

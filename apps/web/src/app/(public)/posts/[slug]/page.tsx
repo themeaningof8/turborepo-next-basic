@@ -1,6 +1,6 @@
+import keystaticConfig from '@/keystatic.config'
 import { createReader } from '@keystatic/core/reader'
 import { DocumentRenderer } from '@keystatic/core/renderer'
-import keystaticConfig from '@/keystatic.config'
 
 const reader = createReader(process.cwd(), keystaticConfig)
 
