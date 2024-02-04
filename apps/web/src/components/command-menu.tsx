@@ -51,7 +51,7 @@ export function CommandMenu({ ...props }: DialogProps) {
       <Button
         variant="outline"
         className={cn(
-          "relative h-8 w-full justify-start rounded-[0.5rem] bg-background font-normal text-muted-foreground text-sm shadow-none lg:w-64 md:w-40 sm:pr-12"
+          'relative h-8 w-full justify-start rounded-[0.5rem] bg-background font-normal text-muted-foreground text-sm shadow-none lg:w-64 md:w-40 sm:pr-12'
         )}
         onClick={() => setOpen(true)}
         {...props}
