@@ -20,5 +20,5 @@
   "dependencies": {
     "tailwindcss": "^3.4.0"
   },
-  "ignorePatterns": ["tokens/**/*.js"]
+  "ignorePatterns": ["tokens/*.ts"]
 }

@@ -1,6 +1,0 @@
-{
-  "extends": ["../../biome.json"],
-  "files": {
-    "ignore": [".next", "dist", ".storybook", "public", "storybook-static"]
-  }
-}

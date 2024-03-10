@@ -5,12 +5,13 @@
   "tsx": true,
   "tailwind": {
     "config": "tailwind.config.js",
-    "css": "src/styles/globals.css",
+    "css": "src/global.css",
     "baseColor": "stone",
-    "cssVariables": true
+    "cssVariables": false,
+    "prefix": ""
   },
   "aliases": {
-    "components": "src/components",
-    "utils": "@lib/utils"
+    "components": "@/components",
+    "utils": "@/lib/utils"
   }
 }

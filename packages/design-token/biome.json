@@ -1,6 +1,6 @@
 {
   "extends": ["../../biome.json"],
   "files": {
-    "ignore": ["tokens"]
+    "ignore": ["tokens/*.ts"]
   }
 }

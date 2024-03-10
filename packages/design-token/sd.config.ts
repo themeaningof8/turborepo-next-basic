@@ -22,16 +22,12 @@ StyleDictionary.registerTransform({
 })
 
 StyleDictionary.registerTransformGroup({
-  name: 'css',
-  transforms: ['attribute/cti', 'color/hsl']
-})
-
-StyleDictionary.registerTransformGroup({
   name: 'js',
   transforms: ['attribute/cti', 'size/pxToRem']
 })
 
 const categories = [
+  'colors',
   'borderRadius',
   'borderWidth',
   'fontSize',
@@ -84,7 +80,7 @@ StyleDictionary.registerParser({
 const getDestination = ({
   extension,
   name
-}: { extension: 'css' | 'json' | 'ts'; name: string }) => {
+}: { extension: 'json' | 'ts'; name: string }) => {
   return [name, 'tokens', extension].join('.')
 }
 
@@ -92,7 +88,7 @@ const getSdJsConfig = (category: TokenCategoryType) => {
   return {
     platforms: {
       js: {
-        buildPath: 'tokens/js/',
+        buildPath: 'tokens/',
         files: [
           {
             destination: getDestination({ extension: 'ts', name: category }),
@@ -109,35 +105,9 @@ const getSdJsConfig = (category: TokenCategoryType) => {
   }
 }
 
-const getSdCssConfig = () => {
-  return {
-    platforms: {
-      css: {
-        buildPath: 'tokens/css/',
-        files: [
-          {
-            destination: getDestination({ extension: 'css', name: 'color' }),
-            filter: (token: DesignToken) => {
-              return token.category === 'color'
-            },
-            format: 'css/variables',
-            options: {
-              outputReferences: true
-            }
-          }
-        ],
-        transformGroup: 'css'
-      }
-    },
-    source: ['tokens.json']
-  }
-}
-
 // Build default tokens from config
 console.log('👷 Building default tokens')
 
 categories.map((category) => {
   StyleDictionary.extend(getSdJsConfig(category)).buildAllPlatforms()
 })
-
-StyleDictionary.extend(getSdCssConfig()).buildAllPlatforms()
