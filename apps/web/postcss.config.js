@@ -1,8 +1,1 @@
-module.exports = {
-  plugins: {
-    autoprefixer: {},
-    'postcss-import': {},
-    tailwindcss: {},
-    ...(process.env.NODE_ENV === 'production' ? { cssnano: {} } : {})
-  }
-}
+module.exports = require('@themeaningof8/ui/postcss.config')

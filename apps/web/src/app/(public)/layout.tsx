@@ -11,7 +11,7 @@ export default function Layout({
     <>
       <Header />
       <main className="mx-6 my-10 min-h-dvh">
-        <div className="prose prose-slate dark:prose-invert mx-auto">
+        <div className="prose prose-stone dark:prose-invert mx-auto">
           {children}
         </div>
       </main>

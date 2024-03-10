@@ -333,18 +333,33 @@ importers:
         specifier: ^3.22.4
         version: 3.22.4
     devDependencies:
+      '@tailwindcss/typography':
+        specifier: ^0.5.10
+        version: 0.5.10(tailwindcss@3.4.0)
+      '@themeaningof8/design-token':
+        specifier: workspace:*
+        version: link:../design-token
       '@themeaningof8/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
       '@types/react':
         specifier: ^18.2.46
         version: 18.2.46
+      autoprefixer:
+        specifier: ^10.4.16
+        version: 10.4.16(postcss@8.4.32)
       class-variance-authority:
         specifier: ^0.6.1
         version: 0.6.1
       clsx:
         specifier: ^1.2.1
         version: 1.2.1
+      cssnano:
+        specifier: ^6.0.2
+        version: 6.0.2(postcss@8.4.32)
+      postcss:
+        specifier: ^8.4.32
+        version: 8.4.32
       tailwind-merge:
         specifier: ^1.14.0
         version: 1.14.0
@@ -4078,7 +4093,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.22.2
-      caniuse-lite: 1.0.30001572
+      caniuse-lite: 1.0.30001596
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -4127,7 +4142,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001572
+      caniuse-lite: 1.0.30001596
       electron-to-chromium: 1.4.616
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.22.2)
@@ -4169,7 +4184,6 @@ packages:
 
   /caniuse-lite@1.0.30001596:
     resolution: {integrity: sha512-zpkZ+kEr6We7w63ORkoJ2pOfBwBkY/bJrG/UZ90qNb45Isblu8wzDgevEOrRL1r9dWayHjYiiyCMEXPn4DweGQ==}
-    dev: false
 
   /capital-case@1.0.4:
     resolution: {integrity: sha512-ds37W8CytHgwnhGGTi88pcPyR15qoNkOpYwmMMfnWqqWgESapLqvDx6huFjQ5vqWSn2Z06173XNA7LtMOeUh1A==}
