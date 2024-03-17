@@ -4,7 +4,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"
@@ -18,17 +18,21 @@
     "baseUrl": ".",
     "paths": {
       "@app/*": [
-        "./src/app/*",
+        "./src/app/*"
       ],
       "@components/*": [
-        "./src/components/*",
+        "./src/components/*"
       ],
       "@lib/*": [
-        "./src/lib/*",
+        "./src/lib/*"
+      ],
+      "@ui/*": [
+        "../../packages/ui/src/*"
       ],
       "@/*": [
-        "./*",
-      ],
-    }
+        "./*"
+      ]
+    },
+    "forceConsistentCasingInFileNames": true
   }
 }

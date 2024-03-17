@@ -1,15 +1,11 @@
 {
   "name": "@themeaningof8/ui",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
     "lint": "biome lint . --apply",
     "format": "biome format . --write",
     "check": "biome format ."
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",

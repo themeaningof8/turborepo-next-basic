@@ -1,4 +1,4 @@
-import { Button } from '@themeaningof8/ui/src/components/button'
+import { Button } from '@themeaningof8/ui/components/button'
 import Head from 'next/head'
 import Link from 'next/link'
 

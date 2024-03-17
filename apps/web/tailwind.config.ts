@@ -1,8 +1,10 @@
 import Presets from '@themeaningof8/ui/tailwind.config'
 import type { Config } from 'tailwindcss'
 
-export default {
+const config: Config = {
   content: ['./src/**/*.{ts,tsx}'],
   darkMode: ['class'],
   presets: [Presets]
-} satisfies Config
+}
+
+export default config
