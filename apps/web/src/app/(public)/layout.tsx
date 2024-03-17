@@ -1,6 +1,6 @@
 import Header from '@components/header'
 
-import '@app/global.css'
+import '@themeaningof8/ui/globals.css'
 
 export default function Layout({
   children
