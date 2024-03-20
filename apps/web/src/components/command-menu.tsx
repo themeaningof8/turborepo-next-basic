@@ -1,12 +1,11 @@
 'use client'
 
-import * as React from 'react'
-import { useRouter } from 'next/navigation'
 import { DialogProps } from '@radix-ui/react-alert-dialog'
+import { useRouter } from 'next/navigation'
+import * as React from 'react'
 
 import { docsConfig } from '@/src/config/docs'
-import { cn } from '@lib/utils'
-import { Button } from '@components/ui/button'
+import { Button } from '@themeaningof8/ui/components/button'
 import {
   CommandDialog,
   CommandEmpty,
@@ -14,7 +13,8 @@ import {
   CommandInput,
   CommandItem,
   CommandList
-} from '@components/ui/command'
+} from '@themeaningof8/ui/components/command'
+import { cn } from '@themeaningof8/ui/lib/utils'
 
 export function CommandMenu({ ...props }: DialogProps) {
   const router = useRouter()

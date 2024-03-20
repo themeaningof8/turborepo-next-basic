@@ -1,9 +1,9 @@
 import Link from 'next/link'
 
-import { Button } from '@components/ui/button'
+import { siteConfig } from '@/src/config/site'
 import { CommandMenu } from '@components/command-menu'
 import { ModeToggle } from '@components/mode-toggle'
-import { siteConfig } from '@/src/config/site'
+import { Button } from '@themeaningof8/ui/components/button'
 
 export default function Header() {
   return (
