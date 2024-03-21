@@ -6,8 +6,25 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
-  transpilePackages: ['@themeaningof8/ui']
+  transpilePackages: ['@themeaningof8/ui'],
+  experimental: {
+    turbo: {
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.ts'
+        }
+      }
+    }
+  },
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/i,
+      use: ['@svgr/webpack']
+    })
+
+    return config
+  }
 }
 
 module.exports = withBundleAnalyzer(nextConfig)
