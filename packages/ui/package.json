@@ -1,6 +1,7 @@
 {
   "name": "@themeaningof8/ui",
   "version": "1.0.0",
+  "license": "ISC",
   "scripts": {
     "lint": "biome lint . --apply",
     "format": "biome format . --write",
@@ -8,7 +9,6 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
-  "license": "ISC",
   "devDependencies": {
     "@chromatic-com/storybook": "^1.2.25",
     "@storybook/addon-actions": "^8.0.4",

@@ -1,7 +1,6 @@
 {
   "name": "@themeaningof8/design-token",
   "version": "0.0.0",
-  "main": "index.ts",
   "license": "MIT",
   "scripts": {
     "build": "ts-node sd.config.ts",
@@ -17,8 +16,7 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   },
-  "dependencies": {
-    "tailwindcss": "^3.4.0"
-  },
-  "ignorePatterns": ["tokens/*.ts"]
+  "exports": {
+    "./*": "./tokens/*.tokens.ts"
+  }
 }

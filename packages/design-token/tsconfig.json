@@ -1,13 +1,10 @@
 {
   "extends": "@themeaningof8/tsconfig/base.json",
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-  ],
   "compilerOptions": {
     "baseUrl": ".",
-    "lib": [
-      "esnext"
-    ]
-  }
+  },
+  "include": [
+    "tokens",
+  ],
+  "exclude": ["node_modules"]
 }

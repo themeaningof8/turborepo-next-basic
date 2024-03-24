@@ -1,14 +1,26 @@
 import type { Config } from 'tailwindcss'
 
 import Typography from '@tailwindcss/typography'
-import Presets from '@themeaningof8/design-token'
 import Animate from 'tailwindcss-animate'
+
+import borderRadius from '@themeaningof8/design-token/borderRadius'
+import borderWidth from '@themeaningof8/design-token/borderWidth'
+import colors from '@themeaningof8/design-token/colors'
+import fontSize from '@themeaningof8/design-token/fontSize'
+import opacity from '@themeaningof8/design-token/opacity'
+import spacing from '@themeaningof8/design-token/spacing'
 
 export default {
   content: ['./src/**/*.{ts,tsx}'],
   darkMode: ['class'],
   theme: {
     extend: {
+      colors,
+      borderRadius,
+      borderWidth,
+      fontSize,
+      opacity,
+      spacing,
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out'
@@ -25,6 +37,5 @@ export default {
       }
     }
   },
-  plugins: [Typography, Animate],
-  presets: [Presets, Animate]
+  plugins: [Typography, Animate]
 } satisfies Config
