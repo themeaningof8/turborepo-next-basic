@@ -17,6 +17,7 @@
     "typescript": "^5.3.3"
   },
   "exports": {
+    "./tokens.json": "./tokens.json",
     "./*": "./tokens/*.tokens.ts"
   }
 }
