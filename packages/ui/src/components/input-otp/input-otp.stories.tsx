@@ -21,8 +21,8 @@ const meta = {
     pattern: REGEXP_ONLY_DIGITS_AND_CHARS,
     render: ({ slots }) => (
       <InputOTPGroup>
-        {slots.map((slot, index) => (
-          <InputOTPSlot key={index} {...slot} />
+        {slots.map((slot) => (
+          <InputOTPSlot key={slot.char} {...slot} />
         ))}
       </InputOTPGroup>
     )
@@ -51,14 +51,14 @@ export const SeparatedGroup: Story = {
       render={({ slots }) => (
         <>
           <InputOTPGroup>
-            {slots.slice(0, args.maxLength / 2).map((slot, index) => (
-              <InputOTPSlot key={index} {...slot} />
+            {slots.slice(0, args.maxLength / 2).map((slot) => (
+              <InputOTPSlot key={slot.char} {...slot} />
             ))}
           </InputOTPGroup>
           <InputOTPSeparator />
           <InputOTPGroup>
             {slots.slice(args.maxLength / 2).map((slot, index) => (
-              <InputOTPSlot key={index + 3} {...slot} />
+              <InputOTPSlot key={slot.char} {...slot} />
             ))}
           </InputOTPGroup>
         </>

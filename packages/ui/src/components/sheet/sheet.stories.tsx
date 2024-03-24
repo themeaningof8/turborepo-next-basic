@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
+import { Button } from '@ui/components/button'
 import {
   Sheet,
   SheetClose,
@@ -43,11 +44,9 @@ const meta: Meta<typeof SheetContent> = {
         </SheetHeader>
         <SheetFooter>
           <SheetClose>
-            <button className="hover:underline">Cancel</button>
+            <Button variant="ghost">Cancel</Button>
           </SheetClose>
-          <button className="rounded bg-primary px-4 py-2 text-primary-foreground">
-            Submit
-          </button>
+          <Button>Submit</Button>
         </SheetFooter>
       </SheetContent>
     </Sheet>

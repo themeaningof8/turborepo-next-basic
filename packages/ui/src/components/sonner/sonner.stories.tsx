@@ -2,6 +2,7 @@ import { action } from '@storybook/addon-actions'
 import type { Meta, StoryObj } from '@storybook/react'
 import { toast } from 'sonner'
 
+import { Button } from '@ui/components/button'
 import { Toaster } from '@ui/components/sonner'
 
 /**
@@ -30,7 +31,7 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
   render: (args) => (
     <div className="flex min-h-96 items-center justify-center space-x-2">
-      <button
+      <Button
         onClick={() =>
           toast('Event has been created', {
             description: new Date().toLocaleString(),
@@ -42,7 +43,7 @@ export const Default: Story = {
         }
       >
         Show Toast
-      </button>
+      </Button>
       <Toaster {...args} />
     </div>
   )

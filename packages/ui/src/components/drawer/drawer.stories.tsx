@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
+import { Button } from '@ui/components/button'
 import {
   Drawer,
   DrawerClose,
@@ -28,11 +29,9 @@ const meta: Meta<typeof Drawer> = {
           <DrawerDescription>This action cannot be undone.</DrawerDescription>
         </DrawerHeader>
         <DrawerFooter>
-          <button className="rounded bg-primary px-4 py-2 text-primary-foreground">
-            Submit
-          </button>
-          <DrawerClose>
-            <button className="hover:underline">Cancel</button>
+          <Button>Submit</Button>
+          <DrawerClose asChild>
+            <Button variant="ghost">Cancel</Button>
           </DrawerClose>
         </DrawerFooter>
       </DrawerContent>
