@@ -22,7 +22,7 @@ export default config({
   },
   singletons: {},
   storage: {
-    kind: 'cloud'
+    kind: 'local'
   },
   cloud: {
     project: 'themeaningof8/kazkiueda'
