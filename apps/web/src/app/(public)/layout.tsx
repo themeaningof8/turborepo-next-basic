@@ -1,7 +1,5 @@
 import Header from '@components/header'
 
-import '@themeaningof8/ui/globals.css'
-
 export default function Layout({
   children
 }: {
