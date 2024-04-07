@@ -1,15 +1,13 @@
 import type { Config } from 'tailwindcss'
 
-import tailwindcssTypography from '@tailwindcss/typography'
-import animation from '@ui/tailwind/animation'
-import borderRadius from '@ui/tailwind/borderRadius'
-import borderWidth from '@ui/tailwind/borderWidth'
-import colors from '@ui/tailwind/colors'
-import fontSize from '@ui/tailwind/fontSize'
-import keyframes from '@ui/tailwind/keyframes'
-import opacity from '@ui/tailwind/opacity'
-import spacing from '@ui/tailwind/spacing'
-import tailwindcssAnimate from 'tailwindcss-animate'
+import animation from './src/tailwind/animation'
+import borderRadius from './src/tailwind/borderRadius'
+import borderWidth from './src/tailwind/borderWidth'
+import colors from './src/tailwind/colors'
+import fontSize from './src/tailwind/fontSize'
+import keyframes from './src/tailwind/keyframes'
+import opacity from './src/tailwind/opacity'
+import spacing from './src/tailwind/spacing'
 
 export default {
   content: ['./src/**/*.{ts,tsx}'],
@@ -26,5 +24,5 @@ export default {
       keyframes
     }
   },
-  plugins: [tailwindcssTypography, tailwindcssAnimate]
+  plugins: [require('@tailwindcss/typography'), require('tailwindcss-animate')]
 } satisfies Config

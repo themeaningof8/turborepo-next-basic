@@ -7,12 +7,11 @@ module.exports = {
         'attribute/cti',
         'name/cti/kebab',
         'color/hex',
-        'size/rem',
-        'designToken/size/pxToRem'
+        'size/pxToRem'
       ],
       files: [
         {
-          destination: 'variables.css',
+          destination: 'index.css',
           format: 'css/variables',
           options: {
             outputReferences: true

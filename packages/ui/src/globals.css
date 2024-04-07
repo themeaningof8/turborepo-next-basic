@@ -1,4 +1,4 @@
-@import @themeaningfulcss/design-tokens/variables.css;
+@import "@themeaningof8/design-token";
 
 @tailwind base;
 @tailwind components;

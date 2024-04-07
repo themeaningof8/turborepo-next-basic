@@ -2,6 +2,7 @@
   "name": "@themeaningof8/design-token",
   "version": "0.0.0",
   "license": "MIT",
+  "main": "index.css",
   "scripts": {
     "build": "style-dictionary build -c sd.config.js",
     "lint": "biome lint . --apply",
