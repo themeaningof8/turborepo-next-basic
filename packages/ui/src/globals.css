@@ -1,3 +1,5 @@
+@import @themeaningfulcss/design-tokens/variables.css;
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

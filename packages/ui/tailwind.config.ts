@@ -1,14 +1,15 @@
 import type { Config } from 'tailwindcss'
 
-import Typography from '@tailwindcss/typography'
-import Animate from 'tailwindcss-animate'
-
-import borderRadius from '@themeaningof8/design-token/borderRadius'
-import borderWidth from '@themeaningof8/design-token/borderWidth'
-import colors from '@themeaningof8/design-token/colors'
-import fontSize from '@themeaningof8/design-token/fontSize'
-import opacity from '@themeaningof8/design-token/opacity'
-import spacing from '@themeaningof8/design-token/spacing'
+import tailwindcssTypography from '@tailwindcss/typography'
+import animation from '@ui/tailwind/animation'
+import borderRadius from '@ui/tailwind/borderRadius'
+import borderWidth from '@ui/tailwind/borderWidth'
+import colors from '@ui/tailwind/colors'
+import fontSize from '@ui/tailwind/fontSize'
+import keyframes from '@ui/tailwind/keyframes'
+import opacity from '@ui/tailwind/opacity'
+import spacing from '@ui/tailwind/spacing'
+import tailwindcssAnimate from 'tailwindcss-animate'
 
 export default {
   content: ['./src/**/*.{ts,tsx}'],
@@ -21,21 +22,9 @@ export default {
       fontSize,
       opacity,
       spacing,
-      animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out'
-      },
-      keyframes: {
-        'accordion-down': {
-          from: { height: '0' },
-          to: { height: 'var(--radix-accordion-content-height)' }
-        },
-        'accordion-up': {
-          from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: '0' }
-        }
-      }
+      animation,
+      keyframes
     }
   },
-  plugins: [Typography, Animate]
+  plugins: [tailwindcssTypography, tailwindcssAnimate]
 } satisfies Config

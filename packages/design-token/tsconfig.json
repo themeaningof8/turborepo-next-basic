@@ -1,8 +1,0 @@
-{
-  "extends": "@themeaningof8/tsconfig/base.json",
-  "compilerOptions": {
-    "baseUrl": ".",
-  },
-  "include": ["./**/*.ts", "./**/*.tsx"],
-  "exclude": ["node_modules"]
-}
