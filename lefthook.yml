@@ -1,17 +1,11 @@
-pre-push:
-  commands:
-    packages-audit:
-      tags: frontend security
-      run: pnpm audit
-
 pre-commit:
   parallel: true
   commands:
     build-token:
       glob: "packages/design-token/*"
-      run: pnpm run build:token
+      run: bun run build:token
     check:
       glob: "*.{js,ts,jsx,tsx,json}"
-      run: pnpm run check
+      run: bun run check
     test/e2e:
-      run: pnpm run test:e2e
+      run: bun run test:e2e
