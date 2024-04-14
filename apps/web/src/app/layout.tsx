@@ -2,7 +2,7 @@ import { siteConfig } from '@/src/config/site'
 import { ThemeProvider } from '@components/theme-provider'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-import { Metadata, Viewport } from 'next'
+import type { Metadata, Viewport } from 'next'
 
 import '@themeaningof8/ui/globals.css'
 
