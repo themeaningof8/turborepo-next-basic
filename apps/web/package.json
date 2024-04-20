@@ -13,8 +13,6 @@
     "analyze-bundle": "ANALYZE=true next build"
   },
   "dependencies": {
-    "@keystatic/core": "^0.5.11",
-    "@keystatic/next": "^5.0.0",
     "@radix-ui/react-alert-dialog": "^1.0.5",
     "@themeaningof8/design-token": "workspace:*",
     "@themeaningof8/ui": "workspace:*",
