@@ -13,7 +13,7 @@ StyleDictionary.registerTransform({
       return options?.basePxFontSize || 16
     }
     const baseFont = getBasePxFontSize(options)
-    const floatVal = parseFloat(token.value)
+    const floatVal = Number.parseFloat(token.value)
     if (floatVal === 0) {
       return '0'
     }
