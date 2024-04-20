@@ -1,1 +1,9 @@
-module.exports = require('@themeaningof8/ui/postcss.config')
+const { join } = require('node:path')
+
+module.exports = {
+  plugins: {
+    '@tailwindcss/postcss': {
+      base: join(__dirname, '../../')
+    }
+  }
+}

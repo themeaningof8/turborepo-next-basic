@@ -1,20 +1,19 @@
+require('./transforms/pxToRem.js')
+require('./transforms/kebabCase.js')
+
 module.exports = {
   source: ['./tokens.json'],
   platforms: {
     css: {
       buildPath: './',
-      transforms: [
-        'attribute/cti',
-        'name/cti/kebab',
-        'color/hex',
-        'size/pxToRem'
-      ],
+      transforms: ['name/cti/kebab', 'color/hex', 'size/pxToRem'],
       files: [
         {
           destination: 'index.css',
           format: 'css/variables',
           options: {
-            outputReferences: true
+            outputReferences: true,
+            selector: '@theme'
           }
         }
       ]
