@@ -72,7 +72,7 @@ export const WithButton: Story = {
     <div className="grid w-full gap-2">
       <Textarea {...args} />
       <button
-        className="rounded bg-primary-backgroundpx-4 py-2 text-primary-foreground"
+        className="rounded bg-primary-background px-4 py-2 text-primary-foreground"
         type="submit"
       >
         Send Message

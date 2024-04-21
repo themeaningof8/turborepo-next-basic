@@ -1,4 +1,5 @@
 require('./transforms/pxToRem.js')
+require('./transforms/deleteDefault.js')
 require('./transforms/kebabCase.js')
 
 module.exports = {
@@ -6,7 +7,12 @@ module.exports = {
   platforms: {
     css: {
       buildPath: './',
-      transforms: ['name/cti/kebab', 'color/hex', 'size/pxToRem'],
+      transforms: [
+        'name/cti/kebab',
+        'name/deleteDefault',
+        'color/hex',
+        'size/pxToRem'
+      ],
       files: [
         {
           destination: 'index.css',

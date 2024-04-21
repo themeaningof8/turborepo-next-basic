@@ -3,9 +3,9 @@ pre-commit:
   commands:
     build-token:
       glob: "packages/design-token/*"
-      run: bun run build:token
+      run: pnpm run build:token
     check:
       glob: "*.{js,ts,jsx,tsx,json}"
-      run: bun run check
+      run: pnpm run check
     test/e2e:
-      run: bun run test:e2e
+      run: pnpm run test:e2e
