@@ -18,18 +18,18 @@
     "@themeaningof8/ui": "workspace:*",
     "@vercel/analytics": "^1.1.1",
     "@vercel/speed-insights": "^1.0.2",
-    "lucide-react": "^0.372.0",
+    "lucide-react": "^0.379.0",
     "next": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.8.2",
-    "@biomejs/biome": "1.7.0",
+    "@biomejs/biome": "1.7.3",
     "@next/bundle-analyzer": "^14.0.4",
     "@playwright/test": "^1.40.1",
     "@svgr/webpack": "^8.1.0",
-    "@tailwindcss/postcss": "4.0.0-alpha.14",
+    "@tailwindcss/postcss": "4.0.0-alpha.15",
     "@themeaningof8/design-token": "workspace:*",
     "@themeaningof8/tsconfig": "workspace:*",
     "@types/node": "^20.12.7",
@@ -39,7 +39,7 @@
     "next-themes": "^0.2.0",
     "playwright": "^1.40.1",
     "postcss": "^8.4.32",
-    "tailwindcss": "4.0.0-alpha.14",
+    "tailwindcss": "4.0.0-alpha.15",
     "typescript": "^5.4.5"
   }
 }
