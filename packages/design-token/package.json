@@ -10,9 +10,9 @@
     "check": "biome format ."
   },
   "devDependencies": {
-    "@biomejs/biome": "1.7.0",
+    "@biomejs/biome": "1.8.3",
     "@themeaningof8/tsconfig": "workspace:*",
     "lodash": "^4.17.21",
-    "style-dictionary": "^3.9.1"
+    "style-dictionary": "^4.0.0"
   }
 }
